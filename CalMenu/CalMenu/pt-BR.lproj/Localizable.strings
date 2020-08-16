@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  CalMenu
+
+  Created by Fernando Crespo on 14/08/20.
+  Copyright © 2020 Fernando Crespo. All rights reserved.
+*/
+
+"Quit" = "Sair";
+"Preferences" = "Preferências";

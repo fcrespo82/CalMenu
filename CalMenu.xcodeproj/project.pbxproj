@@ -3,24 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		ED25B16724E719B700371D24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED25B16624E719B700371D24 /* AppDelegate.swift */; };
-		ED25B16924E719B700371D24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED25B16824E719B700371D24 /* ViewController.swift */; };
 		ED25B16B24E719BC00371D24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED25B16A24E719BC00371D24 /* Assets.xcassets */; };
-		ED25B16E24E719BC00371D24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED25B16C24E719BC00371D24 /* Main.storyboard */; };
+		ED25B17924E7213C00371D24 /* CalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED25B17824E7213C00371D24 /* CalView.swift */; };
+		ED82251624E787230040E115 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED82251424E787230040E115 /* Localizable.strings */; };
+		ED82251B24E788FB0040E115 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = ED82251A24E788FB0040E115 /* HotKey */; };
+		ED82251D24E78A860040E115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED82251C24E78A860040E115 /* Main.storyboard */; };
+		ED82255A24E7933F0040E115 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82255924E7933F0040E115 /* CalendarHelper.swift */; };
+		ED82255C24E9843A0040E115 /* PrefsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82255B24E9843A0040E115 /* PrefsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ED25B16324E719B700371D24 /* CalMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED25B16624E719B700371D24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED25B16824E719B700371D24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ED25B16A24E719BC00371D24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ED25B16D24E719BC00371D24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED25B16F24E719BC00371D24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED25B17024E719BC00371D24 /* CalMenu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CalMenu.entitlements; sourceTree = "<group>"; };
+		ED25B17824E7213C00371D24 /* CalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalView.swift; sourceTree = "<group>"; };
+		ED82251524E787230040E115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = CalMenu/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		ED82251824E787420040E115 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "CalMenu/pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		ED82251C24E78A860040E115 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		ED82255924E7933F0040E115 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
+		ED82255B24E9843A0040E115 /* PrefsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED82251B24E788FB0040E115 /* HotKey in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,11 +63,14 @@
 			isa = PBXGroup;
 			children = (
 				ED25B16624E719B700371D24 /* AppDelegate.swift */,
-				ED25B16824E719B700371D24 /* ViewController.swift */,
+				ED25B17824E7213C00371D24 /* CalView.swift */,
 				ED25B16A24E719BC00371D24 /* Assets.xcassets */,
-				ED25B16C24E719BC00371D24 /* Main.storyboard */,
+				ED82251C24E78A860040E115 /* Main.storyboard */,
 				ED25B16F24E719BC00371D24 /* Info.plist */,
 				ED25B17024E719BC00371D24 /* CalMenu.entitlements */,
+				ED82251424E787230040E115 /* Localizable.strings */,
+				ED82255924E7933F0040E115 /* CalendarHelper.swift */,
+				ED82255B24E9843A0040E115 /* PrefsView.swift */,
 			);
 			path = CalMenu;
 			sourceTree = "<group>";
@@ -79,6 +91,9 @@
 			dependencies = (
 			);
 			name = CalMenu;
+			packageProductDependencies = (
+				ED82251A24E788FB0040E115 /* HotKey */,
+			);
 			productName = CalMenu;
 			productReference = ED25B16324E719B700371D24 /* CalMenu.app */;
 			productType = "com.apple.product-type.application";
@@ -105,8 +120,12 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = ED25B15A24E719B700371D24;
+			packageReferences = (
+				ED82251924E788FB0040E115 /* XCRemoteSwiftPackageReference "HotKey" */,
+			);
 			productRefGroup = ED25B16424E719B700371D24 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -121,8 +140,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED82251D24E78A860040E115 /* Main.storyboard in Resources */,
 				ED25B16B24E719BC00371D24 /* Assets.xcassets in Resources */,
-				ED25B16E24E719BC00371D24 /* Main.storyboard in Resources */,
+				ED82251624E787230040E115 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +153,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED25B16924E719B700371D24 /* ViewController.swift in Sources */,
+				ED25B17924E7213C00371D24 /* CalView.swift in Sources */,
+				ED82255C24E9843A0040E115 /* PrefsView.swift in Sources */,
+				ED82255A24E7933F0040E115 /* CalendarHelper.swift in Sources */,
 				ED25B16724E719B700371D24 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,12 +163,13 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ED25B16C24E719BC00371D24 /* Main.storyboard */ = {
+		ED82251424E787230040E115 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ED25B16D24E719BC00371D24 /* Base */,
+				ED82251524E787230040E115 /* Base */,
+				ED82251824E787420040E115 /* pt-BR */,
 			);
-			name = Main.storyboard;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -156,6 +179,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -216,6 +240,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -327,6 +352,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED82251924E788FB0040E115 /* XCRemoteSwiftPackageReference "HotKey" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/soffes/HotKey";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED82251A24E788FB0040E115 /* HotKey */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED82251924E788FB0040E115 /* XCRemoteSwiftPackageReference "HotKey" */;
+			productName = HotKey;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ED25B15B24E719B700371D24 /* Project object */;
 }
