@@ -10,13 +10,37 @@ import Foundation
 class CalendarHelper {
     static let calendar = Calendar.autoupdatingCurrent
 
-    static func getDaysPadded(for date: Date = Date()) -> [Int] {
-        let day = calendar.component(.day, from: date)
-//        let firstDayOfThisMonth = calendar.date(byAdding: DateComponents(day: -(day - 1)), to: date)!
-        let lastDayOfLastMonth = calendar.date(byAdding: DateComponents(day: -day), to: date)!
+    static func getDaysPadded(for date: Date = Date()) -> [[(Int, Bool, Bool)]] {
+        let components = calendar.dateComponents([.year, .month], from: date)
+
+        let firstDayOfThisMonth = calendar.date(from: components)!
+        let firstDayOfNextMonth = calendar.date(byAdding: DateComponents(month: 1), to: firstDayOfThisMonth)!
+
+        let lastDayOfLastMonth = calendar.date(byAdding: DateComponents(day: -1), to: firstDayOfThisMonth)!
+
         let daysInThisMonth = calendar.range(of: .day, in: .month, for: date)!
-        let daysInLastMonth = calendar.component(.weekday, from: lastDayOfLastMonth)
-        return Array(repeating: 0, count: daysInLastMonth % 7) + Array(daysInThisMonth)
+        let daysInLastMonth = calendar.range(of: .day, in: .weekOfMonth, for: lastDayOfLastMonth)!
+        let daysInNextMonth = calendar.range(of: .day, in: .weekOfMonth, for: firstDayOfNextMonth)!
+
+        let tupleDaysInLastMonth = daysInLastMonth.map { (day) -> (day: Int, dimmed: Bool, selected: Bool) in
+            (day: day, dimmed: true, selected: false)
+        }
+        let tupleDaysInThisMonth = daysInThisMonth.map { (day) -> (day: Int, dimmed: Bool, selected: Bool) in
+            (day: day, dimmed: false, selected: day == calendar.component(.day, from: Date()))
+        }
+        let tupleDaysInNextMonth = daysInNextMonth.map { (day) -> (day: Int, dimmed: Bool, selected: Bool) in
+            (day: day, dimmed: true, selected: false)
+        }
+
+        var daysOfMonthByWeek: [[(Int, Bool, Bool)]] = []
+
+        // Divide days into weeks easiyly
+        _ = (Array(tupleDaysInLastMonth) + Array(tupleDaysInThisMonth) + Array(tupleDaysInNextMonth)).publisher
+            .collect(7)
+            .collect()
+            .sink(receiveValue: { daysOfMonthByWeek = $0 })
+
+        return daysOfMonthByWeek
     }
 
     static func stringDay(for day: Int) -> String {
@@ -26,8 +50,9 @@ class CalendarHelper {
         return " "
     }
 
-    static func monthName(for date: Date = Date()) -> String {
+    static func monthName(for date: Date = Date(), locale: Locale = Locale.autoupdatingCurrent) -> String {
         let formatter = DateFormatter()
+        formatter.locale = locale
         formatter.setLocalizedDateFormatFromTemplate("MMMM")
         return formatter.string(from: date).capitalized
     }

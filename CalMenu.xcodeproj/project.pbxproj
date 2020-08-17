@@ -15,6 +15,9 @@
 		ED82251D24E78A860040E115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED82251C24E78A860040E115 /* Main.storyboard */; };
 		ED82255A24E7933F0040E115 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82255924E7933F0040E115 /* CalendarHelper.swift */; };
 		ED82255C24E9843A0040E115 /* PrefsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82255B24E9843A0040E115 /* PrefsView.swift */; };
+		ED82255E24E9B9400040E115 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82255D24E9B9400040E115 /* DayView.swift */; };
+		ED82256224E9E4580040E115 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82256124E9E4580040E115 /* WeekView.swift */; };
+		ED82256424EA04A80040E115 /* WeekHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82256324EA04A80040E115 /* WeekHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		ED82251C24E78A860040E115 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		ED82255924E7933F0040E115 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		ED82255B24E9843A0040E115 /* PrefsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsView.swift; sourceTree = "<group>"; };
+		ED82255D24E9B9400040E115 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		ED82256124E9E4580040E115 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
+		ED82256324EA04A80040E115 /* WeekHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,9 @@
 			children = (
 				ED25B16624E719B700371D24 /* AppDelegate.swift */,
 				ED25B17824E7213C00371D24 /* CalView.swift */,
+				ED82256124E9E4580040E115 /* WeekView.swift */,
+				ED82256324EA04A80040E115 /* WeekHeaderView.swift */,
+				ED82255D24E9B9400040E115 /* DayView.swift */,
 				ED25B16A24E719BC00371D24 /* Assets.xcassets */,
 				ED82251C24E78A860040E115 /* Main.storyboard */,
 				ED25B16F24E719BC00371D24 /* Info.plist */,
@@ -153,7 +162,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED82256424EA04A80040E115 /* WeekHeaderView.swift in Sources */,
+				ED82256224E9E4580040E115 /* WeekView.swift in Sources */,
 				ED25B17924E7213C00371D24 /* CalView.swift in Sources */,
+				ED82255E24E9B9400040E115 /* DayView.swift in Sources */,
 				ED82255C24E9843A0040E115 /* PrefsView.swift in Sources */,
 				ED82255A24E7933F0040E115 /* CalendarHelper.swift in Sources */,
 				ED25B16724E719B700371D24 /* AppDelegate.swift in Sources */,
