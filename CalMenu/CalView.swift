@@ -69,14 +69,14 @@ struct CalView_Previews: PreviewProvider {
 
     static var previews: some View {
         Group {
-            CalView(date: Date()).previewLayout(.fixed(width: 260, height: 191)).colorScheme(.light).environment(\.locale, .init(identifier: "pt-br"))
+            CalView(date: Date()).previewLayout(.fixed(width: 260, height: 191)).colorScheme(.light)
 
             CalView(date: Date()).previewLayout(.fixed(width: 260, height: 191))
                 .colorScheme(.dark).environment(\.locale, .init(identifier: "en"))
-//
-//            ForEach(1 ... 12, id: \.self) { month in
-//                CalView(date: calendar.date(from: DateComponents(year: 2020, month: month, day: 3))!).previewLayout(.fixed(width: 260, height: 191))
-//            }
-        }
+
+            ForEach(1 ... 12, id: \.self) { month in
+                CalView(date: calendar.date(from: DateComponents(year: 2020, month: month, day: 3))!).previewLayout(.fixed(width: 260, height: 191))
+            }
+        }.environment(\.locale, .init(identifier: "pt-br"))
     }
 }
