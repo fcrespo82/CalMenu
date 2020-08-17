@@ -16,9 +16,6 @@ struct CalView: View {
     @Environment(\.locale) var locale
 
     var body: some View {
-        let dateFormatter = DateFormatter()
-        dateFormatter.locale = locale
-
         let daysOfMonthByWeek = CalendarHelper.getDaysPadded(for: self.date)
 
         return VStack {
@@ -29,7 +26,7 @@ struct CalView: View {
                     .padding(5)
                     .padding([.bottom], 5)
                 HStack(spacing: 0) {
-                    ForEach(dateFormatter.veryShortWeekdaySymbols, id: \.self) { weekday in
+                    ForEach(CalendarHelper.veryShortWeekdaySymbols(locale: locale), id: \.self) { weekday in
                         Text(weekday)
                             .fontWeight(.bold)
                             .frame(width: self.cellSize, height: self.cellSize, alignment: .center)

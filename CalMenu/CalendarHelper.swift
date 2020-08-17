@@ -56,4 +56,10 @@ class CalendarHelper {
         formatter.setLocalizedDateFormatFromTemplate("MMMM")
         return formatter.string(from: date).capitalized
     }
+
+    static func veryShortWeekdaySymbols(locale: Locale = Locale.autoupdatingCurrent) -> [String] {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = locale
+        return dateFormatter.veryShortWeekdaySymbols
+    }
 }
