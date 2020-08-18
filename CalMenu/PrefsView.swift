@@ -11,20 +11,34 @@ import SwiftUI
 struct PrefsView: View {
     @Binding var text: String
 
+    @State var selectedOption = "Select an option"
+
+
     var body: some View {
         Form {
             Section {
-                MenuButton(label: Text("First day of week")) {
-                    Text("Sunday")
-                    Text("Monday")
+                MenuButton(selectedOption) {
+                    Button(action: {self.selectedOption = "Option 1"}) {
+                        Text("Option 1")
+                    }
+                    Button(action: {self.selectedOption = "Option 2"}) {
+                        Text("Option 2")
+                    }
+                    Button(action: {self.selectedOption = "Option 3"}) {
+                        Text("Option 3")
+                    }
                 }
-                Picker(selection: .constant(1), label: Text("First day of week")) {
-                    Text("Sunday").tag(1)
+                Picker(selection: $selectedOption, label: Text("First day of week")) {
+                    Button(action: {self.selectedOption = "Option 1"}) {
+                        Text("Option 1")
+                    }
                     Text("Monday").tag(2)
                 }
                 TextField("OK", text: $text)
             }
-        }.padding()
+        }
+        .fixedSize()
+        .padding()
     }
 }
 

@@ -18,7 +18,28 @@
 		ED82255E24E9B9400040E115 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82255D24E9B9400040E115 /* DayView.swift */; };
 		ED82256224E9E4580040E115 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82256124E9E4580040E115 /* WeekView.swift */; };
 		ED82256424EA04A80040E115 /* WeekHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82256324EA04A80040E115 /* WeekHeaderView.swift */; };
+		ED82256C24EB5FCE0040E115 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82256B24EB5FCE0040E115 /* AppDelegate.swift */; };
+		ED82257024EB5FD50040E115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED82256F24EB5FD50040E115 /* Assets.xcassets */; };
+		ED82257324EB5FD50040E115 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED82257224EB5FD50040E115 /* Preview Assets.xcassets */; };
+		ED82257624EB5FD50040E115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED82257424EB5FD50040E115 /* Main.storyboard */; };
+		ED82257D24EB60590040E115 /* CalMenuLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = ED82256924EB5FCD0040E115 /* CalMenuLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ED82258024EB60680040E115 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED82257F24EB60680040E115 /* ServiceManagement.framework */; };
+		ED82258224EB60CF0040E115 /* AppDelegate+LauncherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82258124EB60CF0040E115 /* AppDelegate+LauncherHelper.swift */; };
+		ED82258524EB61BC0040E115 /* AppDelegate+LauncherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82258124EB60CF0040E115 /* AppDelegate+LauncherHelper.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ED82257C24EB601C0040E115 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				ED82257D24EB60590040E115 /* CalMenuLauncher.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		ED25B16324E719B700371D24 /* CalMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +56,15 @@
 		ED82255D24E9B9400040E115 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		ED82256124E9E4580040E115 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		ED82256324EA04A80040E115 /* WeekHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekHeaderView.swift; sourceTree = "<group>"; };
+		ED82256924EB5FCD0040E115 /* CalMenuLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalMenuLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED82256B24EB5FCE0040E115 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ED82256F24EB5FD50040E115 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED82257224EB5FD50040E115 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ED82257524EB5FD50040E115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED82257724EB5FD50040E115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED82257824EB5FD50040E115 /* CalMenuLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CalMenuLauncher.entitlements; sourceTree = "<group>"; };
+		ED82257F24EB60680040E115 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		ED82258124EB60CF0040E115 /* AppDelegate+LauncherHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+LauncherHelper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +73,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED82251B24E788FB0040E115 /* HotKey in Frameworks */,
+				ED82258024EB60680040E115 /* ServiceManagement.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED82256624EB5FCD0040E115 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				ED25B16524E719B700371D24 /* CalMenu */,
+				ED82256A24EB5FCE0040E115 /* CalMenuLauncher */,
 				ED25B16424E719B700371D24 /* Products */,
+				ED82257E24EB60670040E115 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				ED25B16324E719B700371D24 /* CalMenu.app */,
+				ED82256924EB5FCD0040E115 /* CalMenuLauncher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				ED25B16624E719B700371D24 /* AppDelegate.swift */,
+				ED82258124EB60CF0040E115 /* AppDelegate+LauncherHelper.swift */,
 				ED25B17824E7213C00371D24 /* CalView.swift */,
 				ED82256124E9E4580040E115 /* WeekView.swift */,
 				ED82256324EA04A80040E115 /* WeekHeaderView.swift */,
@@ -84,6 +126,35 @@
 			path = CalMenu;
 			sourceTree = "<group>";
 		};
+		ED82256A24EB5FCE0040E115 /* CalMenuLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				ED82256B24EB5FCE0040E115 /* AppDelegate.swift */,
+				ED82256F24EB5FD50040E115 /* Assets.xcassets */,
+				ED82257424EB5FD50040E115 /* Main.storyboard */,
+				ED82257724EB5FD50040E115 /* Info.plist */,
+				ED82257824EB5FD50040E115 /* CalMenuLauncher.entitlements */,
+				ED82257124EB5FD50040E115 /* Preview Content */,
+			);
+			path = CalMenuLauncher;
+			sourceTree = "<group>";
+		};
+		ED82257124EB5FD50040E115 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				ED82257224EB5FD50040E115 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ED82257E24EB60670040E115 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED82257F24EB60680040E115 /* ServiceManagement.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,6 +165,7 @@
 				ED25B15F24E719B700371D24 /* Sources */,
 				ED25B16024E719B700371D24 /* Frameworks */,
 				ED25B16124E719B700371D24 /* Resources */,
+				ED82257C24EB601C0040E115 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -107,6 +179,23 @@
 			productReference = ED25B16324E719B700371D24 /* CalMenu.app */;
 			productType = "com.apple.product-type.application";
 		};
+		ED82256824EB5FCD0040E115 /* CalMenuLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED82257924EB5FD50040E115 /* Build configuration list for PBXNativeTarget "CalMenuLauncher" */;
+			buildPhases = (
+				ED82256524EB5FCD0040E115 /* Sources */,
+				ED82256624EB5FCD0040E115 /* Frameworks */,
+				ED82256724EB5FCD0040E115 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CalMenuLauncher;
+			productName = CalMenuLauncher;
+			productReference = ED82256924EB5FCD0040E115 /* CalMenuLauncher.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -118,6 +207,9 @@
 				ORGANIZATIONNAME = "Fernando Crespo";
 				TargetAttributes = {
 					ED25B16224E719B700371D24 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					ED82256824EB5FCD0040E115 = {
 						CreatedOnToolsVersion = 11.6;
 					};
 				};
@@ -140,6 +232,7 @@
 			projectRoot = "";
 			targets = (
 				ED25B16224E719B700371D24 /* CalMenu */,
+				ED82256824EB5FCD0040E115 /* CalMenuLauncher */,
 			);
 		};
 /* End PBXProject section */
@@ -155,6 +248,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ED82256724EB5FCD0040E115 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED82257624EB5FD50040E115 /* Main.storyboard in Resources */,
+				ED82257324EB5FD50040E115 /* Preview Assets.xcassets in Resources */,
+				ED82257024EB5FD50040E115 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -163,12 +266,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED82256424EA04A80040E115 /* WeekHeaderView.swift in Sources */,
+				ED82258224EB60CF0040E115 /* AppDelegate+LauncherHelper.swift in Sources */,
 				ED82256224E9E4580040E115 /* WeekView.swift in Sources */,
 				ED25B17924E7213C00371D24 /* CalView.swift in Sources */,
 				ED82255E24E9B9400040E115 /* DayView.swift in Sources */,
 				ED82255C24E9843A0040E115 /* PrefsView.swift in Sources */,
 				ED82255A24E7933F0040E115 /* CalendarHelper.swift in Sources */,
 				ED25B16724E719B700371D24 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED82256524EB5FCD0040E115 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED82258524EB61BC0040E115 /* AppDelegate+LauncherHelper.swift in Sources */,
+				ED82256C24EB5FCE0040E115 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +295,14 @@
 				ED82251824E787420040E115 /* pt-BR */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		ED82257424EB5FD50040E115 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED82257524EB5FD50040E115 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -342,6 +463,52 @@
 			};
 			name = Release;
 		};
+		ED82257A24EB5FD50040E115 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CalMenuLauncher/CalMenuLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"CalMenuLauncher/Preview Content\"";
+				DEVELOPMENT_TEAM = DWJ2ZWUP8Q;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = CalMenuLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.crespo.CalMenuLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		ED82257B24EB5FD50040E115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CalMenuLauncher/CalMenuLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"CalMenuLauncher/Preview Content\"";
+				DEVELOPMENT_TEAM = DWJ2ZWUP8Q;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = CalMenuLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.crespo.CalMenuLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -359,6 +526,15 @@
 			buildConfigurations = (
 				ED25B17424E719BC00371D24 /* Debug */,
 				ED25B17524E719BC00371D24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED82257924EB5FD50040E115 /* Build configuration list for PBXNativeTarget "CalMenuLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED82257A24EB5FD50040E115 /* Debug */,
+				ED82257B24EB5FD50040E115 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -8,6 +8,7 @@
 
 import Combine
 import SwiftUI
+import ServiceManagement
 
 struct CalView: View {
     var cellSize: CGFloat = 20
@@ -42,13 +43,12 @@ struct CalView: View {
                 }
             }
             HStack {
-                Button(action: {
-                    print("Open config")
-                }) {
-                    Text("Preferences")
-                        .padding(.horizontal, 5)
-                }
-
+//                Button(action: {
+//                    self.showPreferences()
+//                }) {
+//                    Text("Preferences")
+//                        .padding(.horizontal, 5)
+//                }
                 Spacer()
                 Button(action: {
                     NSApplication.shared.terminate(nil)
@@ -62,6 +62,16 @@ struct CalView: View {
         .padding(10)
         .background(Color(NSColor.windowBackgroundColor))
     }
+
+    func showPreferences() {
+        let hostingController = NSHostingController(rootView: PrefsView(text: .constant("Test")))
+        let window = NSWindow(contentViewController: hostingController)
+        window.toolbar = NSToolbar()
+        window.title = "Preferences"
+//        window.setContentSize(NSSize(width: 500, height: 200))
+        window.makeKeyAndOrderFront(nil)
+        window.makeMain()
+    }
 }
 
 struct CalView_Previews: PreviewProvider {
@@ -74,9 +84,9 @@ struct CalView_Previews: PreviewProvider {
             CalView(date: Date()).previewLayout(.fixed(width: 260, height: 191))
                 .colorScheme(.dark).environment(\.locale, .init(identifier: "en"))
 
-            ForEach(1 ... 12, id: \.self) { month in
-                CalView(date: calendar.date(from: DateComponents(year: 2020, month: month, day: 3))!).previewLayout(.fixed(width: 260, height: 191))
-            }
+//            ForEach(1 ... 12, id: \.self) { month in
+//                CalView(date: calendar.date(from: DateComponents(year: 2020, month: month, day: 3))!).previewLayout(.fixed(width: 260, height: 191))
+//            }
         }.environment(\.locale, .init(identifier: "pt-br"))
     }
 }
