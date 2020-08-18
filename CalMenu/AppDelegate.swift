@@ -19,7 +19,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var window: NSWindow!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
         createStatusBarMenu()
         showPopoverHotKey.keyDownHandler = {
             self.togglePopover(nil)
@@ -27,7 +26,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
     }
 
     func createStatusBarMenu() {
