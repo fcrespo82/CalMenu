@@ -26,7 +26,15 @@ class CalendarHelper {
             (day: day, dimmed: true, selected: false)
         }
         let tupleDaysInThisMonth = daysInThisMonth.map { (day) -> (day: Int, dimmed: Bool, selected: Bool) in
-            (day: day, dimmed: false, selected: day == calendar.component(.day, from: Date()))
+
+            let thisDate = calendar.date(byAdding: DateComponents(day: day - 1), to: firstDayOfThisMonth)!
+
+            let sameMonth = calendar.component(.month, from: thisDate) == calendar.component(.month, from: Date())
+            let sameDay = calendar.component(.day, from: thisDate) == calendar.component(.day, from: Date())
+
+//            let select = calendar.compare(thisDate, to: Date(), toGranularity: .day) == .orderedSame
+
+            return (day: day, dimmed: false, selected: sameDay && sameMonth)
         }
         let tupleDaysInNextMonth = daysInNextMonth.map { (day) -> (day: Int, dimmed: Bool, selected: Bool) in
             (day: day, dimmed: true, selected: false)
@@ -63,3 +71,4 @@ class CalendarHelper {
         return dateFormatter.veryShortWeekdaySymbols
     }
 }
+

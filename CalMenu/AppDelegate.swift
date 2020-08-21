@@ -11,7 +11,7 @@ import HotKey
 import SwiftUI
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSPopoverDelegate {
     var statusBarItem: NSStatusItem!
     let popover = NSPopover()
     let showPopoverHotKey = HotKey(key: .c, modifiers: [.command, .option])
@@ -35,8 +35,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.title = "🗓"
             button.action = #selector(togglePopover(_:))
         }
-
-        popover.contentViewController = NSHostingController(rootView: CalView(date: Date()))
         popover.behavior = .transient
     }
 
@@ -50,11 +48,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func showPopover(sender: Any?) {
         if let button = statusBarItem.button {
+            popover.contentViewController = NSHostingController(rootView: CalView())
             popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
         }
     }
 
     func closePopover(sender: Any?) {
         popover.performClose(sender)
+        popover.contentViewController = nil
     }
 }

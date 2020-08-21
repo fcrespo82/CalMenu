@@ -7,41 +7,54 @@
 //
 
 import Combine
-import SwiftUI
 import ServiceManagement
+import SwiftUI
+
+
 
 struct CalView: View {
     var cellSize: CGFloat = 20
-    var date: Date
+    @State private var date: Date! = Date()
     @Environment(\.calendar) var calendar
     @Environment(\.locale) var locale
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
+    init() {
+        date = Date()
+    }
 
     var body: some View {
-        let daysOfMonthByWeek = CalendarHelper.getDaysPadded(for: self.date)
-
+        let daysOfMonthByWeek = CalendarHelper.getDaysPadded(for: date)
         return VStack {
-            VStack(spacing: 0) {
+            HStack(spacing: 0) {
+                Button(action: {
+                    date = date.advanced(by: -.oneMonth)
+                }) {
+                    Text("<")
+                }
+                Spacer()
                 Text(CalendarHelper.monthName(for: date, locale: locale))
-                    .font(.title)
+                    .font(.headline)
                     .fontWeight(.bold)
                     .padding(5)
-                    .padding([.bottom], 5)
-                HStack(spacing: 0) {
-                    ForEach(CalendarHelper.veryShortWeekdaySymbols(locale: locale), id: \.self) { weekday in
-                        Text(weekday)
-                            .fontWeight(.bold)
-                            .frame(width: self.cellSize, height: self.cellSize, alignment: .center)
-                            .padding(5)
-                    }
-                }
-                .background(Color(NSColor.controlBackgroundColor))
-                .cornerRadius(5)
-            }
-            ForEach(0 ..< daysOfMonthByWeek.count, id: \.self) { week in
-                HStack(spacing: 0) {
-                    WeekView(week: daysOfMonthByWeek[week])
+                    .onTapGesture(count: 1, perform: {
+                        date = Date()
+                    })
+                Spacer()
+                Button(action: {
+                    date = date.advanced(by: .oneMonth)
+                }) {
+                    Text(">")
                 }
             }
+            WeekHeaderView()
+            ForEach(daysOfMonthByWeek.indices, id: \.self) { week in
+                HStack(spacing: 0) {
+                    WeekView(week: .constant(daysOfMonthByWeek[week]))
+//                    Text("\(week)")
+                }
+            }
+            Spacer()
             HStack {
 //                Button(action: {
 //                    self.showPreferences()
@@ -58,7 +71,7 @@ struct CalView: View {
                 }
             }
         }
-        .frame(width: 210, height: 290, alignment: .center)
+        .frame(width: 210, height: 280, alignment: .top)
         .padding(10)
         .background(Color(NSColor.windowBackgroundColor))
     }
@@ -79,14 +92,8 @@ struct CalView_Previews: PreviewProvider {
 
     static var previews: some View {
         Group {
-            CalView(date: Date()).previewLayout(.fixed(width: 260, height: 191)).colorScheme(.light)
-
-            CalView(date: Date()).previewLayout(.fixed(width: 260, height: 191))
-                .colorScheme(.dark).environment(\.locale, .init(identifier: "en"))
-
-//            ForEach(1 ... 12, id: \.self) { month in
-//                CalView(date: calendar.date(from: DateComponents(year: 2020, month: month, day: 3))!).previewLayout(.fixed(width: 260, height: 191))
-//            }
+            CalView().colorScheme(.light)
+            CalView().colorScheme(.dark).environment(\.locale, .init(identifier: "en"))
         }.environment(\.locale, .init(identifier: "pt-br"))
     }
 }

@@ -10,6 +10,7 @@
 		ED25B16724E719B700371D24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED25B16624E719B700371D24 /* AppDelegate.swift */; };
 		ED25B16B24E719BC00371D24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED25B16A24E719BC00371D24 /* Assets.xcassets */; };
 		ED25B17924E7213C00371D24 /* CalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED25B17824E7213C00371D24 /* CalView.swift */; };
+		ED31334524F080BA00A49B6D /* TimeInterval+RealInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31334424F080BA00A49B6D /* TimeInterval+RealInterval.swift */; };
 		ED82251624E787230040E115 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED82251424E787230040E115 /* Localizable.strings */; };
 		ED82251B24E788FB0040E115 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = ED82251A24E788FB0040E115 /* HotKey */; };
 		ED82251D24E78A860040E115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED82251C24E78A860040E115 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		ED25B16F24E719BC00371D24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED25B17024E719BC00371D24 /* CalMenu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CalMenu.entitlements; sourceTree = "<group>"; };
 		ED25B17824E7213C00371D24 /* CalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalView.swift; sourceTree = "<group>"; };
+		ED31334424F080BA00A49B6D /* TimeInterval+RealInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+RealInterval.swift"; sourceTree = "<group>"; };
 		ED82251524E787230040E115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = CalMenu/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ED82251824E787420040E115 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "CalMenu/pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		ED82251C24E78A860040E115 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				ED82251424E787230040E115 /* Localizable.strings */,
 				ED82255924E7933F0040E115 /* CalendarHelper.swift */,
 				ED82255B24E9843A0040E115 /* PrefsView.swift */,
+				ED31334424F080BA00A49B6D /* TimeInterval+RealInterval.swift */,
 			);
 			path = CalMenu;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				ED82256424EA04A80040E115 /* WeekHeaderView.swift in Sources */,
 				ED82258224EB60CF0040E115 /* AppDelegate+LauncherHelper.swift in Sources */,
 				ED82256224E9E4580040E115 /* WeekView.swift in Sources */,
+				ED31334524F080BA00A49B6D /* TimeInterval+RealInterval.swift in Sources */,
 				ED25B17924E7213C00371D24 /* CalView.swift in Sources */,
 				ED82255E24E9B9400040E115 /* DayView.swift in Sources */,
 				ED82255C24E9843A0040E115 /* PrefsView.swift in Sources */,

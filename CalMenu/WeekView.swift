@@ -9,21 +9,26 @@
 import SwiftUI
 
 struct WeekView: View {
-    var cellSize: CGFloat = 20
-    var week: [(day: Int, dimmed: Bool, selected: Bool)]
+    @Binding var week: [(day: Int, dimmed: Bool, selected: Bool)]
+
     var body: some View {
         HStack(spacing: 0) {
-            ForEach(week, id: \.day) { item in
-                DayView(day: item.day, dimmed: item.dimmed, selected: item.selected)
+
+            ForEach(week.indices, id: \.self) { item in
+                DayView(day: $week[item].day, dimmed: $week[item].dimmed, selected: $week[item].selected)
             }
         }
     }
 }
 
 struct WeekView_Previews: PreviewProvider {
-    static let daysOfMonthByWeek = CalendarHelper.getDaysPadded(for: Date())
+    static let daysOfMonthByWeek = CalendarHelper.getDaysPadded(for: Date().advanced(by: 60*60*24*30))
 
     static var previews: some View {
-        WeekView(week: daysOfMonthByWeek[0])
+        WeekView(week: .constant(daysOfMonthByWeek[0]))
+//        WeekView(week: daysOfMonthByWeek[1])
+//        WeekView(week: daysOfMonthByWeek[2])
+//        WeekView(week: daysOfMonthByWeek[3])
+//        WeekView(week: daysOfMonthByWeek[4])
     }
 }
