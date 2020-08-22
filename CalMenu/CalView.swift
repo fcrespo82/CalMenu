@@ -10,8 +10,6 @@ import Combine
 import ServiceManagement
 import SwiftUI
 
-
-
 struct CalView: View {
     var cellSize: CGFloat = 20
     @State private var date: Date! = Date()
@@ -30,7 +28,7 @@ struct CalView: View {
                 Button(action: {
                     date = date.advanced(by: -.oneMonth)
                 }) {
-                    Text("<")
+                    Text("􀄪")
                 }
                 Spacer()
                 Text(CalendarHelper.monthName(for: date, locale: locale))
@@ -44,7 +42,7 @@ struct CalView: View {
                 Button(action: {
                     date = date.advanced(by: .oneMonth)
                 }) {
-                    Text(">")
+                    Text("􀄫")
                 }
             }
             WeekHeaderView()
@@ -73,7 +71,6 @@ struct CalView: View {
         }
         .frame(width: 210, height: 280, alignment: .top)
         .padding(10)
-        .background(Color(NSColor.windowBackgroundColor))
     }
 
     func showPreferences() {
