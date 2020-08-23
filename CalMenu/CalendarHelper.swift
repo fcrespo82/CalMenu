@@ -28,13 +28,9 @@ class CalendarHelper {
         let tupleDaysInThisMonth = daysInThisMonth.map { (day) -> (day: Int, dimmed: Bool, selected: Bool) in
 
             let thisDate = calendar.date(byAdding: DateComponents(day: day - 1), to: firstDayOfThisMonth)!
+            let select = calendar.compare(thisDate, to: Date(), toGranularity: .day) == .orderedSame
 
-            let sameMonth = calendar.component(.month, from: thisDate) == calendar.component(.month, from: Date())
-            let sameDay = calendar.component(.day, from: thisDate) == calendar.component(.day, from: Date())
-
-//            let select = calendar.compare(thisDate, to: Date(), toGranularity: .day) == .orderedSame
-
-            return (day: day, dimmed: false, selected: sameDay && sameMonth)
+            return (day: day, dimmed: false, selected: select)
         }
         let tupleDaysInNextMonth = daysInNextMonth.map { (day) -> (day: Int, dimmed: Bool, selected: Bool) in
             (day: day, dimmed: true, selected: false)
@@ -70,5 +66,11 @@ class CalendarHelper {
         dateFormatter.locale = locale
         return dateFormatter.veryShortWeekdaySymbols
     }
-}
 
+    static func year(for date: Date = Date(), locale: Locale = Locale.autoupdatingCurrent) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = locale
+        formatter.setLocalizedDateFormatFromTemplate("YYYY")
+        return formatter.string(from: date)
+    }
+}

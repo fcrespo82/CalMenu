@@ -23,44 +23,37 @@ struct CalView: View {
 
     var body: some View {
         let daysOfMonthByWeek = CalendarHelper.getDaysPadded(for: date)
-        return VStack {
-            HStack(spacing: 0) {
-                Button(action: {
-                    date = date.advanced(by: -.oneMonth)
-                }) {
-                    Text("􀄪")
-                }
-                Spacer()
-                Text(CalendarHelper.monthName(for: date, locale: locale))
-                    .font(.headline)
-                    .fontWeight(.bold)
-                    .padding(5)
+        return
+            VStack(alignment: .trailing) {
+                HStack {
+                    Button(action: {
+                        date = date.advanced(by: -.oneMonth)
+                    }) {
+                        Text("􀄪")
+                    }
+                    VStack {
+                        Text(CalendarHelper.monthName(for: date, locale: locale))
+                            .font(.headline)
+                            .fontWeight(.bold).padding(.bottom, 5)
+                            .foregroundColor(Color.accentColor)
+                        Text(CalendarHelper.year(for: date, locale: locale))
+                            .font(.footnote)
+                    }
+                    .frame(maxWidth: .infinity)
                     .onTapGesture(count: 1, perform: {
                         date = Date()
                     })
-                Spacer()
-                Button(action: {
-                    date = date.advanced(by: .oneMonth)
-                }) {
-                    Text("􀄫")
-                }
-            }
-            WeekHeaderView()
-            ForEach(daysOfMonthByWeek.indices, id: \.self) { week in
-                HStack(spacing: 0) {
+                    Button(action: {
+                        date = date.advanced(by: .oneMonth)
+                    }) {
+                        Text("􀄫")
+                    }
+                }.frame(maxWidth: 210)
+                WeekHeaderView()
+                ForEach(daysOfMonthByWeek.indices, id: \.self) { week in
                     WeekView(week: .constant(daysOfMonthByWeek[week]))
-//                    Text("\(week)")
                 }
-            }
-            Spacer()
-            HStack {
-//                Button(action: {
-//                    self.showPreferences()
-//                }) {
-//                    Text("Preferences")
-//                        .padding(.horizontal, 5)
-//                }
-                Spacer()
+
                 Button(action: {
                     NSApplication.shared.terminate(nil)
                 }) {
@@ -68,9 +61,7 @@ struct CalView: View {
                         .padding(.horizontal, 5)
                 }
             }
-        }
-        .frame(width: 210, height: 280, alignment: .top)
-        .padding(10)
+            .padding(5)
     }
 
     func showPreferences() {
