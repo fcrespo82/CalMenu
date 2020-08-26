@@ -27,7 +27,7 @@ struct CalView: View {
             VStack(alignment: .trailing) {
                 HStack {
                     Button(action: {
-                        date = date.advanced(by: -.oneMonth)
+                        self.date = self.date.advanced(by: -.oneMonth)
                     }) {
                         Text("􀄪")
                     }
@@ -41,10 +41,10 @@ struct CalView: View {
                     }
                     .frame(maxWidth: .infinity)
                     .onTapGesture(count: 1, perform: {
-                        date = Date()
+                        self.date = Date()
                     })
                     Button(action: {
-                        date = date.advanced(by: .oneMonth)
+                        self.date = self.date.advanced(by: .oneMonth)
                     }) {
                         Text("􀄫")
                     }

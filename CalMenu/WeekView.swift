@@ -15,7 +15,7 @@ struct WeekView: View {
         HStack(spacing: 0) {
 
             ForEach(week.indices, id: \.self) { item in
-                DayView(day: $week[item].day, dimmed: $week[item].dimmed, selected: $week[item].selected)
+                DayView(day: self.$week[item].day, dimmed: self.$week[item].dimmed, selected: self.$week[item].selected)
             }
         }
     }

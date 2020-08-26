@@ -23,7 +23,6 @@
 		ED82257024EB5FD50040E115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED82256F24EB5FD50040E115 /* Assets.xcassets */; };
 		ED82257324EB5FD50040E115 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED82257224EB5FD50040E115 /* Preview Assets.xcassets */; };
 		ED82257624EB5FD50040E115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED82257424EB5FD50040E115 /* Main.storyboard */; };
-		ED82257D24EB60590040E115 /* CalMenuLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = ED82256924EB5FCD0040E115 /* CalMenuLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		ED82258024EB60680040E115 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED82257F24EB60680040E115 /* ServiceManagement.framework */; };
 		ED82258224EB60CF0040E115 /* AppDelegate+LauncherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82258124EB60CF0040E115 /* AppDelegate+LauncherHelper.swift */; };
 		ED82258524EB61BC0040E115 /* AppDelegate+LauncherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82258124EB60CF0040E115 /* AppDelegate+LauncherHelper.swift */; };
@@ -36,7 +35,6 @@
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				ED82257D24EB60590040E115 /* CalMenuLauncher.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +65,7 @@
 		ED82257824EB5FD50040E115 /* CalMenuLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CalMenuLauncher.entitlements; sourceTree = "<group>"; };
 		ED82257F24EB60680040E115 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		ED82258124EB60CF0040E115 /* AppDelegate+LauncherHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+LauncherHelper.swift"; sourceTree = "<group>"; };
+		EDC6795D24F6FC0200502145 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +91,7 @@
 		ED25B15A24E719B700371D24 = {
 			isa = PBXGroup;
 			children = (
+				EDC6795D24F6FC0200502145 /* README.md */,
 				ED25B16524E719B700371D24 /* CalMenu */,
 				ED82256A24EB5FCE0040E115 /* CalMenuLauncher */,
 				ED25B16424E719B700371D24 /* Products */,
@@ -432,8 +432,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CalMenu/CalMenu.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = DWJ2ZWUP8Q;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = CalMenu/Info.plist;
@@ -452,8 +454,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CalMenu/CalMenu.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = DWJ2ZWUP8Q;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = CalMenu/Info.plist;
