@@ -16,18 +16,13 @@ struct DayView: View {
     @State var dayTextColor: Color = Color(NSColor.controlTextColor)
 
     var body: some View {
-        if selected {
-            dayTextColor = Color(NSColor.alternateSelectedControlTextColor)
-        }
-        if dimmed {
-            dayTextColor = Color(NSColor.secondaryLabelColor)
-        }
         return Text("\(day)")
             .frame(width: self.cellSize, height: self.cellSize, alignment: .center)
             .padding(5)
             .background(self.selected ? Color(NSColor.controlAccentColor) : nil)
             .cornerRadius(.infinity)
-            .foregroundColor(dayTextColor)
+            .foregroundColor(self.selected ? Color(NSColor.alternateSelectedControlTextColor) : dimmed ? Color(NSColor.secondaryLabelColor) : Color(NSColor.textColor)
+            )
             .opacity(dimmed ? 0.5 : 1.0)
     }
 }
@@ -42,13 +37,13 @@ struct DayView_Previews: PreviewProvider {
             }
             .background(Color(NSColor.windowBackgroundColor))
             .colorScheme(.light)
-//            VStack {
-//                DayView(day: 4)
-//                DayView(day: 5, selected: true)
-//                DayView(day: 6, dimmed: true)
-//            }
-//            .background(Color(NSColor.windowBackgroundColor))
-//            .colorScheme(.dark)
+			VStack {
+				DayView(day: .constant(1), dimmed: .constant(false), selected: .constant(false))
+				DayView(day: .constant(2), dimmed: .constant(false), selected: .constant(true))
+				DayView(day: .constant(3), dimmed: .constant(true), selected: .constant(false))
+			}
+			.background(Color(NSColor.windowBackgroundColor))
+            .colorScheme(.dark)
         }
     }
 }

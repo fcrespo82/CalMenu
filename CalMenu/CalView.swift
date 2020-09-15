@@ -15,7 +15,6 @@ struct CalView: View {
     @State private var date: Date! = Date()
     @Environment(\.calendar) var calendar
     @Environment(\.locale) var locale
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     init() {
         date = Date()
@@ -29,7 +28,7 @@ struct CalView: View {
                     Button(action: {
                         self.date = self.date.advanced(by: -.oneMonth)
                     }) {
-                        Text("􀄪")
+                        Text("←")
                     }
                     VStack {
                         Text(CalendarHelper.monthName(for: date, locale: locale))
@@ -46,14 +45,14 @@ struct CalView: View {
                     Button(action: {
                         self.date = self.date.advanced(by: .oneMonth)
                     }) {
-                        Text("􀄫")
+                        Text("→")
                     }
                 }.frame(maxWidth: 210)
                 WeekHeaderView()
                 ForEach(daysOfMonthByWeek.indices, id: \.self) { week in
                     WeekView(week: .constant(daysOfMonthByWeek[week]))
                 }
-
+				
                 Button(action: {
                     NSApplication.shared.terminate(nil)
                 }) {
@@ -69,9 +68,8 @@ struct CalView: View {
         let window = NSWindow(contentViewController: hostingController)
         window.toolbar = NSToolbar()
         window.title = "Preferences"
-//        window.setContentSize(NSSize(width: 500, height: 200))
-        window.makeKeyAndOrderFront(nil)
-        window.makeMain()
+        window.setContentSize(NSSize(width: 500, height: 200))
+        window.makeKeyAndOrderFront(self)
     }
 }
 
