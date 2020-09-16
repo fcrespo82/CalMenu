@@ -62,9 +62,14 @@ class CalendarHelper {
     }
 
     static func veryShortWeekdaySymbols(locale: Locale = Locale.autoupdatingCurrent) -> [String] {
+        let firstDayOfWeek = Calendar.autoupdatingCurrent.firstWeekday - 1
+
         let dateFormatter = DateFormatter()
         dateFormatter.locale = locale
-        return dateFormatter.veryShortWeekdaySymbols
+
+        var weekdaySymbols = Array(dateFormatter.veryShortWeekdaySymbols)
+        weekdaySymbols.append(contentsOf: dateFormatter.veryShortWeekdaySymbols)
+        return Array(weekdaySymbols[firstDayOfWeek ... firstDayOfWeek + 6])
     }
 
     static func year(for date: Date = Date(), locale: Locale = Locale.autoupdatingCurrent) -> String {
