@@ -52,7 +52,7 @@ struct CalView: View {
                 ForEach(daysOfMonthByWeek.indices, id: \.self) { week in
                     WeekView(week: .constant(daysOfMonthByWeek[week]))
                 }
-				
+
                 Button(action: {
                     NSApplication.shared.terminate(nil)
                 }) {
@@ -79,7 +79,10 @@ struct CalView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             CalView().colorScheme(.light)
-            CalView().colorScheme(.dark).environment(\.locale, .init(identifier: "en"))
+            CalView()
+                .background(Color(NSColor.windowBackgroundColor))
+                .colorScheme(.dark)
+                .environment(\.locale, .init(identifier: "en"))
         }.environment(\.locale, .init(identifier: "pt-br"))
     }
 }
