@@ -20,7 +20,7 @@ struct DayView: View {
             .frame(width: self.cellSize, height: self.cellSize, alignment: .center)
             .padding(5)
             .background(self.selected ? Color(NSColor.controlAccentColor) : nil)
-            .cornerRadius(.infinity)
+            .cornerRadius(self.cellSize)
             .foregroundColor(self.selected ? Color(NSColor.alternateSelectedControlTextColor) : dimmed ? Color(NSColor.secondaryLabelColor) : Color(NSColor.textColor)
             )
             .opacity(dimmed ? 0.5 : 1.0)

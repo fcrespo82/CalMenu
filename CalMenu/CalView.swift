@@ -30,10 +30,10 @@ struct CalView: View {
                     }) {
                         Text("←")
                     }
-                    VStack {
+                    VStack(alignment: .center, spacing: 5) {
                         Text(CalendarHelper.monthName(for: date, locale: locale))
                             .font(.headline)
-                            .fontWeight(.bold).padding(.bottom, 5)
+                            .fontWeight(.bold)
                             .foregroundColor(Color.accentColor)
                         Text(CalendarHelper.year(for: date, locale: locale))
                             .font(.footnote)
@@ -47,7 +47,7 @@ struct CalView: View {
                     }) {
                         Text("→")
                     }
-                }.frame(maxWidth: 210)
+                }
                 WeekHeaderView()
                 ForEach(daysOfMonthByWeek.indices, id: \.self) { week in
                     WeekView(week: .constant(daysOfMonthByWeek[week]))
@@ -58,8 +58,10 @@ struct CalView: View {
                 }) {
                     Text("Quit")
                         .padding(.horizontal, 5)
+                        .fixedSize()
                 }
             }
+            .fixedSize()
             .padding(5)
     }
 
@@ -83,6 +85,6 @@ struct CalView_Previews: PreviewProvider {
                 .background(Color(NSColor.windowBackgroundColor))
                 .colorScheme(.dark)
                 .environment(\.locale, .init(identifier: "en"))
-        }.environment(\.locale, .init(identifier: "pt-br"))
+        }
     }
 }

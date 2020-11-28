@@ -19,8 +19,8 @@ struct WeekHeaderView: View {
                     .frame(width: self.cellSize, height: self.cellSize, alignment: .center)
                     .padding(5)
             }
-        }.background(Color(NSColor.controlBackgroundColor).opacity(0.7))
-            .cornerRadius(5)
+        }.background(Color(NSColor.controlBackgroundColor).opacity(0.5))
+        .cornerRadius(self.cellSize / 2)
     }
 }
 
