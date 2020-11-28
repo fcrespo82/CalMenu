@@ -2,8 +2,10 @@
 
 A simple, yet useful menu extras item to show the current month on macOS 10.15+.
 
-![](images/image1.png)
-![](images/image2.png)
+<p>
+    <img src="images/image1.png" height="414em" />
+    <img src="images/image2.png" height="414em" />
+</p>
 
 ## [1.0.3] - 2020-11-28
 
