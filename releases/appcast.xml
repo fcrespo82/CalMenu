@@ -3,8 +3,15 @@
     <channel>
         <title>CalMenu</title>
         <item>
+            <title>1.1.1</title>
+            <pubDate>seg., 05 abr. 2021 20:14:00 -0300</pubDate>
+            <sparkle:minimumSystemVersion>10.15</sparkle:minimumSystemVersion>
+            <sparkle:releaseNotesLink>https://raw.githubusercontent.com/fcrespo82/CalMenu/master/releases/ReleaseNotes.html</sparkle:releaseNotesLink>
+            <enclosure url="https://github.com/fcrespo82/CalMenu/releases/download/v1.1.1/CalMenu.app.zip" sparkle:version="111" sparkle:shortVersionString="1.1.1" type="application/octet-stream" sparkle:edSignature="bVtui+9vL9HRBQvVpdcx94AuzWA7i4/XChyDAXN6P+Vk4DujsRyfrrQZTYjeNCyoRTkzbK8PiBNlq4BiUTSVDw==" length="1559773"/>
+        </item>
+        <item>
             <title>1.1.0</title>
-            <pubDate>seg., 05 abr. 2021 14:20:20 -0300</pubDate>
+            <pubDate>seg., 05 abr. 2021 14:20:00 -0300</pubDate>
             <sparkle:minimumSystemVersion>10.15</sparkle:minimumSystemVersion>
             <sparkle:releaseNotesLink>https://raw.githubusercontent.com/fcrespo82/CalMenu/master/releases/ReleaseNotes.html</sparkle:releaseNotesLink>
             <enclosure url="https://github.com/fcrespo82/CalMenu/releases/download/v1.1.0/CalMenu.app.zip" sparkle:version="110" sparkle:shortVersionString="1.1.0" type="application/octet-stream" sparkle:edSignature="bVtui+9vL9HRBQvVpdcx94AuzWA7i4/XChyDAXN6P+Vk4DujsRyfrrQZTYjeNCyoRTkzbK8PiBNlq4BiUTSVDw==" length="1559773"/>
