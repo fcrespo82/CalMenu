@@ -10,15 +10,6 @@ import Cocoa
 import Foundation
 import ServiceManagement
 
-let LAUNCHER_APP_IDENTIFIER = "br.com.crespo.CalMenu.Launcher"
-let MAIN_APP_IDENTIFIER = "br.com.crespo.CalMenu"
-let KILL_LAUNCHER_NOTIFICATION_NAME = "br.com.crespo.CalMenu.killLauncher"
-let DEFAULTS_LAUNCH_ON_BOOT_KEY = "launchOnStartUp"
-
-extension Notification.Name {
-    static let killLauncher = Notification.Name(KILL_LAUNCHER_NOTIFICATION_NAME)
-}
-
 func registerLoginItem(_ register: Bool = true) {
     
     SMLoginItemSetEnabled(LAUNCHER_APP_IDENTIFIER as CFString, register)

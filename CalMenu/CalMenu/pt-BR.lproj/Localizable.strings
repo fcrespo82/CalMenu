@@ -8,7 +8,10 @@
 
 "Quit" = "Sair";
 "Settings" = "Preferências";
-"Toggle Calendar View" = "Mostrar/esconder calendário";
+"Toggle Calendar View:" = "Mostrar/esconder calendário:";
 "Close" = "Fechar";
 "Launch on startup" = "Rodar na inicialização";
 "General" = "Geral";
+"Check for updates" = "Verificar por atualizações";
+"Check for updates automatically" = "Verificar por atualizações automaticamente";
+"Updates" = "Atualizações";

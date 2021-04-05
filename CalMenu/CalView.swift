@@ -80,7 +80,7 @@ struct CalView: View {
 
         let window: NSWindow = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 400, height: 200), styleMask: [.closable, .miniaturizable, .resizable, .titled], backing: .buffered, defer: true)
         
-        let hostingController = NSHostingController(rootView: SettingsView(window: window))
+        let hostingController = NSHostingController(rootView: SettingsView(presentingWindow: window))
                 
         window.contentViewController = hostingController
         window.title = NSLocalizedString("Settings", comment: "Settings String")
