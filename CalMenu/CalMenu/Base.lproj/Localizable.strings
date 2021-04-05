@@ -7,4 +7,8 @@
 */
 
 "Quit" = "Quit";
-"Preferences" = "Preferences";
+"Settings" = "Settings";
+"Toggle Calendar View" = "Toggle Calendar View";
+"Close" = "Close";
+"Launch on startup" = "Launch on startup";
+"General" = "General";

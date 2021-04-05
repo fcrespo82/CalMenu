@@ -38,5 +38,11 @@
 	<true/>
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
+    <key>SUPublicEDKey</key>
+    <string>mQJ/gPjbWcYpFbKW6irtNR2rQ+Ds/GFtq4WKEUNBz2k=</string>
+    <key>SUEnableAutomaticChecks</key>
+    <true/>
+    <key>SUFeedURL</key>
+    <string>https://raw.githubusercontent.com/fcrespo82/CalMenu/master/releases/appcast.xml</string>
 </dict>
 </plist>

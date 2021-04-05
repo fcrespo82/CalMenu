@@ -7,4 +7,8 @@
 */
 
 "Quit" = "Sair";
-"Preferences" = "Preferências";
+"Settings" = "Preferências";
+"Toggle Calendar View" = "Mostrar/esconder calendário";
+"Close" = "Fechar";
+"Launch on startup" = "Rodar na inicialização";
+"General" = "Geral";

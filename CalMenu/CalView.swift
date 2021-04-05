@@ -19,7 +19,7 @@ struct CalView: View {
     init() {
         date = Date()
     }
-
+    
     var body: some View {
         let daysOfMonthByWeek = CalendarHelper.getDaysPadded(for: date)
         return
@@ -52,32 +52,47 @@ struct CalView: View {
                 ForEach(daysOfMonthByWeek.indices, id: \.self) { week in
                     WeekView(week: .constant(daysOfMonthByWeek[week]))
                 }
-
-                Button(action: {
-                    NSApplication.shared.terminate(nil)
-                }) {
-                    Text("Quit")
-                        .padding(.horizontal, 5)
-                        .fixedSize()
+                HStack {
+                    Button(action: {
+                        showSettings()
+                    }) {
+                        Text("Settings").padding(.horizontal, 5)
+                            .fixedSize()
+                    }
+                    Spacer()
+                    Button(action: {
+                        NSApplication.shared.terminate(nil)
+                    }) {
+                        Text("Quit")
+                            .padding(.horizontal, 5)
+                            .fixedSize()
+                    }
                 }
             }
             .fixedSize()
             .padding(5)
     }
+    
+    func showSettings() {
+        NSApp.setActivationPolicy(.regular)
+        // If line bellow is not set the app cannot bring the window to the front of all apps.
+        NSApp.activate(ignoringOtherApps: true)
 
-    func showPreferences() {
-        let hostingController = NSHostingController(rootView: PrefsView(text: .constant("Test")))
-        let window = NSWindow(contentViewController: hostingController)
-        window.toolbar = NSToolbar()
-        window.title = "Preferences"
-        window.setContentSize(NSSize(width: 500, height: 200))
-        window.makeKeyAndOrderFront(self)
+        let window: NSWindow = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 400, height: 200), styleMask: [.closable, .miniaturizable, .resizable, .titled], backing: .buffered, defer: true)
+        
+        let hostingController = NSHostingController(rootView: SettingsView(window: window))
+                
+        window.contentViewController = hostingController
+        window.title = NSLocalizedString("Settings", comment: "Settings String")
+        window.center()
+        window.setFrameAutosaveName("Settings Window")
+        window.makeKeyAndOrderFront(nil)
     }
 }
 
 struct CalView_Previews: PreviewProvider {
     static var calendar = Calendar.autoupdatingCurrent
-
+    
     static var previews: some View {
         Group {
             CalView().colorScheme(.light)

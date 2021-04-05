@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>CalMenu</title>
+        <item>
+            <title>1.1.0</title>
+            <pubDate>seg., 05 abr. 2021 14:20:20 -0300</pubDate>
+            <sparkle:minimumSystemVersion>10.15</sparkle:minimumSystemVersion>
+            <enclosure url="CalMenu.app.zip" sparkle:version="5" sparkle:shortVersionString="1.1.0" length="1615757" type="application/octet-stream" sparkle:edSignature="N/p5oOBW9nCORTWqdWmaG3RKfWCtFo/LMngjBm9vSpvkQmr9MAHNMObe6rX//CkCiFpMUFa9fkoNXe33M/RmDQ=="/>
+        </item>
+    </channel>
+</rss>
