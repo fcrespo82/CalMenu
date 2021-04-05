@@ -7,6 +7,13 @@ A simple, yet useful, menu extras item to show the current month on macOS 10.15+
     <img src="images/image2.png" height="414em" />
 </p>
 
+## [1.1.1] - 2021-04-04
+
+### Added
+- Option for running the app on startup
+- Option to record a shortcut to toggle the popover view
+- Sparkle update system
+
 ## [1.1.0] - 2021-04-04
 
 ### Added
