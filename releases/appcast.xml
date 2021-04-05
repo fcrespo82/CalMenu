@@ -6,7 +6,8 @@
             <title>1.1.0</title>
             <pubDate>seg., 05 abr. 2021 14:20:20 -0300</pubDate>
             <sparkle:minimumSystemVersion>10.15</sparkle:minimumSystemVersion>
-            <enclosure url="CalMenu.app.zip" sparkle:version="5" sparkle:shortVersionString="1.1.0" length="1615757" type="application/octet-stream" sparkle:edSignature="N/p5oOBW9nCORTWqdWmaG3RKfWCtFo/LMngjBm9vSpvkQmr9MAHNMObe6rX//CkCiFpMUFa9fkoNXe33M/RmDQ=="/>
+            <sparkle:releaseNotesLink>https://raw.githubusercontent.com/fcrespo82/CalMenu/master/releases/ReleaseNotes.html</sparkle:releaseNotesLink>
+            <enclosure url="CalMenu.app.zip" sparkle:version="110" sparkle:shortVersionString="1.1.0" length="1615757" type="application/octet-stream" sparkle:edSignature="N/p5oOBW9nCORTWqdWmaG3RKfWCtFo/LMngjBm9vSpvkQmr9MAHNMObe6rX//CkCiFpMUFa9fkoNXe33M/RmDQ=="/>
         </item>
     </channel>
 </rss>
