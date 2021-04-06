@@ -13,15 +13,14 @@
                     <li>Option to record a shortcut to toggle the popover view</li>
                     <li>Sparkle update system</li>
                 </ul>
-            ]]>
-            </description>
-            <enclosure url="https://github.com/fcrespo82/CalMenu/releases/download/v1.1.0/CalMenu.app.zip" sparkle:version="110" sparkle:shortVersionString="1.1.0" type="application/octet-stream" sparkle:edSignature="bVtui+9vL9HRBQvVpdcx94AuzWA7i4/XChyDAXN6P+Vk4DujsRyfrrQZTYjeNCyoRTkzbK8PiBNlq4BiUTSVDw==" length="1559773" />
+            ]]></description>
+            <enclosure url="https://github.com/fcrespo82/CalMenu/releases/download/v1.1.0/CalMenu.app.zip" sparkle:version="110" sparkle:shortVersionString="1.1.0" type="application/octet-stream" sparkle:edSignature="bVtui+9vL9HRBQvVpdcx94AuzWA7i4/XChyDAXN6P+Vk4DujsRyfrrQZTYjeNCyoRTkzbK8PiBNlq4BiUTSVDw==" length="1559773"/>
         </item>
         <item>
             <title>1.1.1</title>
             <pubDate>seg., 05 abr. 2021 20:21:28 -0300</pubDate>
             <sparkle:minimumSystemVersion>10.15</sparkle:minimumSystemVersion>
-            <enclosure url="https://raw.githubusercontent.com/fcrespo82/CalMenu/master/releases/CalMenu.app.zip" sparkle:version="111" sparkle:shortVersionString="1.1.1" length="2011504" type="application/octet-stream" sparkle:edSignature="XxmC/XDt3NV92JQD+aI+s3X2U9yQIDDg42sleQJXnRQb1CpfEA0F6rwN/O5TtGoEQmBfdwW306MSQmlMQzIuAA==" />
+            <enclosure url="https://raw.githubusercontent.com/fcrespo82/CalMenu/master/releases/CalMenu.app.zip" sparkle:version="111" sparkle:shortVersionString="1.1.1" length="2011174" type="application/octet-stream" sparkle:edSignature="4hCsEiiQ+VALFQ/Hd+1LCBdheqVvm49EyemDKAkQ91a+dlbDldqQaSG0brRcVZRur7ly4ZEw+ischELgX+6PAA=="/>
             <description><![CDATA[
                 <b>Added</b>
                 <ul>
@@ -29,8 +28,7 @@
                     <li>Option to record a shortcut to toggle the popover view</li>
                     <li>Sparkle update system</li>
                 </ul>
-            ]]>
-            </description>
+            ]]></description>
         </item>
     </channel>
 </rss>
