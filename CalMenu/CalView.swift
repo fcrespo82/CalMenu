@@ -15,7 +15,7 @@ struct CalView: View {
     @State private var date: Date! = Date()
     @Environment(\.calendar) var calendar
     @Environment(\.locale) var locale
-
+    
     init() {
         date = Date()
     }
@@ -74,14 +74,15 @@ struct CalView: View {
     }
     
     func showSettings() {
-        NSApp.setActivationPolicy(.regular)
+        // The application does not appear in the Dock and does not have a menu bar, but it may be activated programmatically or by clicking on one of its windows.
+        NSApplication.shared.setActivationPolicy(.accessory)
         // If line bellow is not set the app cannot bring the window to the front of all apps.
-        NSApp.activate(ignoringOtherApps: true)
-
-        let window: NSWindow = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 400, height: 200), styleMask: [.closable, .miniaturizable, .resizable, .titled], backing: .buffered, defer: true)
+        NSApplication.shared.activate(ignoringOtherApps: true)
+        
+        let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 400, height: 200), styleMask: [.closable, .miniaturizable, .resizable, .titled], backing: .buffered, defer: true)
         
         let hostingController = NSHostingController(rootView: SettingsView(presentingWindow: window))
-                
+        
         window.contentViewController = hostingController
         window.title = NSLocalizedString("Settings", comment: "Settings String")
         window.center()

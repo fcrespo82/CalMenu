@@ -78,6 +78,7 @@
 		ED25B17824E7213C00371D24 /* CalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalView.swift; sourceTree = "<group>"; };
 		ED31334424F080BA00A49B6D /* TimeInterval+RealInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+RealInterval.swift"; sourceTree = "<group>"; };
 		ED3A0B6D261BE88C00A44DAE /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		ED3A0B7E261C0E9100A44DAE /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		ED6A43B3261AAA7D00067D18 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ED813736261BD8F2003E8D77 /* CalMenu.app.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = CalMenu.app.html; sourceTree = "<group>"; };
 		ED82251524E787230040E115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = CalMenu/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -199,6 +200,7 @@
 		ED82257E24EB60670040E115 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED3A0B7E261C0E9100A44DAE /* ApplicationServices.framework */,
 				ED3A0B6D261BE88C00A44DAE /* Sparkle.framework */,
 				ED82257F24EB60680040E115 /* ServiceManagement.framework */,
 			);
@@ -507,7 +509,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 111;
+				CURRENT_PROJECT_VERSION = 112;
 				DEVELOPMENT_ASSET_PATHS = "CalMenuLauncher/Preview\\ Content";
 				DEVELOPMENT_TEAM = DWJ2ZWUP8Q;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -520,7 +522,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.crespo.CalMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -535,7 +537,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 111;
+				CURRENT_PROJECT_VERSION = 112;
 				DEVELOPMENT_ASSET_PATHS = "CalMenuLauncher/Preview\\ Content";
 				DEVELOPMENT_TEAM = DWJ2ZWUP8Q;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -548,7 +550,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.crespo.CalMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
