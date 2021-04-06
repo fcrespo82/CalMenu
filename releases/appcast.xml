@@ -6,15 +6,61 @@
             <title>1.1.0</title>
             <pubDate>seg., 05 abr. 2021 14:20:00 -0300</pubDate>
             <sparkle:minimumSystemVersion>10.15</sparkle:minimumSystemVersion>
-            <sparkle:releaseNotesLink>https://raw.githubusercontent.com/fcrespo82/CalMenu/master/docs/ReleaseNotes.html</sparkle:releaseNotesLink>
-            <enclosure url="https://github.com/fcrespo82/CalMenu/releases/download/v1.1.0/CalMenu.app.zip" sparkle:version="110" sparkle:shortVersionString="1.1.0" type="application/octet-stream" sparkle:edSignature="bVtui+9vL9HRBQvVpdcx94AuzWA7i4/XChyDAXN6P+Vk4DujsRyfrrQZTYjeNCyoRTkzbK8PiBNlq4BiUTSVDw==" length="1559773"/>
+            <description>
+                <![CDATA[ 
+                <!DOCTYPE html>
+                <html lang="en">
+                
+                <head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Document</title>
+                </head>
+                
+                <body>
+                    <b>Added</b>
+                    <ul>
+                        <li>Option for running the app on startup</li>
+                        <li>Option to record a shortcut to toggle the popover view</li>
+                        <li>Sparkle update system</li>
+                    </ul>
+                </body>
+                
+                </html>
+                ]]>
+            </description>
+            <enclosure url="https://github.com/fcrespo82/CalMenu/releases/download/v1.1.0/CalMenu.app.zip" sparkle:version="110" sparkle:shortVersionString="1.1.0" type="application/octet-stream" sparkle:edSignature="bVtui+9vL9HRBQvVpdcx94AuzWA7i4/XChyDAXN6P+Vk4DujsRyfrrQZTYjeNCyoRTkzbK8PiBNlq4BiUTSVDw==" length="1559773" />
         </item>
         <item>
             <title>1.1.1</title>
             <pubDate>seg., 05 abr. 2021 20:21:28 -0300</pubDate>
             <sparkle:minimumSystemVersion>10.15</sparkle:minimumSystemVersion>
-            <enclosure url="https://raw.githubusercontent.com/fcrespo82/CalMenu/master/releases/CalMenu.app.zip" sparkle:version="111" sparkle:shortVersionString="1.1.1" length="2011504" type="application/octet-stream" sparkle:edSignature="XxmC/XDt3NV92JQD+aI+s3X2U9yQIDDg42sleQJXnRQb1CpfEA0F6rwN/O5TtGoEQmBfdwW306MSQmlMQzIuAA=="/>
-            <sparkle:releaseNotesLink>http://blog.fernando.crespo.com.br/CalMenu/CalMenu.app.html</sparkle:releaseNotesLink>
+            <enclosure url="https://raw.githubusercontent.com/fcrespo82/CalMenu/master/releases/CalMenu.app.zip" sparkle:version="111" sparkle:shortVersionString="1.1.1" length="2011504" type="application/octet-stream" sparkle:edSignature="XxmC/XDt3NV92JQD+aI+s3X2U9yQIDDg42sleQJXnRQb1CpfEA0F6rwN/O5TtGoEQmBfdwW306MSQmlMQzIuAA==" />
+            <description>
+                <![CDATA[ 
+                <!DOCTYPE html>
+                <html lang="en">
+                
+                <head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Document</title>
+                </head>
+                
+                <body>
+                    <b>Added</b>
+                    <ul>
+                        <li>Option for running the app on startup</li>
+                        <li>Option to record a shortcut to toggle the popover view</li>
+                        <li>Sparkle update system</li>
+                    </ul>
+                </body>
+                
+                </html>
+                ]]>
+            </description>
         </item>
     </channel>
 </rss>
