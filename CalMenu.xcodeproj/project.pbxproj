@@ -11,30 +11,59 @@
 		ED25B16B24E719BC00371D24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED25B16A24E719BC00371D24 /* Assets.xcassets */; };
 		ED25B17924E7213C00371D24 /* CalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED25B17824E7213C00371D24 /* CalView.swift */; };
 		ED31334524F080BA00A49B6D /* TimeInterval+RealInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31334424F080BA00A49B6D /* TimeInterval+RealInterval.swift */; };
+		ED3A0B6F261BE89400A44DAE /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3A0B6D261BE88C00A44DAE /* Sparkle.framework */; };
+		ED3A0B70261BE89400A44DAE /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED3A0B6D261BE88C00A44DAE /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED6A43B0261AAA7200067D18 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = ED6A43AF261AAA7200067D18 /* KeyboardShortcuts */; };
+		ED6A43B9261AAC7200067D18 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A43B3261AAA7D00067D18 /* Constants.swift */; };
 		ED82251624E787230040E115 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED82251424E787230040E115 /* Localizable.strings */; };
-		ED82251B24E788FB0040E115 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = ED82251A24E788FB0040E115 /* HotKey */; };
 		ED82251D24E78A860040E115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED82251C24E78A860040E115 /* Main.storyboard */; };
 		ED82255A24E7933F0040E115 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82255924E7933F0040E115 /* CalendarHelper.swift */; };
-		ED82255C24E9843A0040E115 /* PrefsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82255B24E9843A0040E115 /* PrefsView.swift */; };
+		ED82255C24E9843A0040E115 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82255B24E9843A0040E115 /* SettingsView.swift */; };
 		ED82255E24E9B9400040E115 /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82255D24E9B9400040E115 /* DayView.swift */; };
 		ED82256224E9E4580040E115 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82256124E9E4580040E115 /* WeekView.swift */; };
 		ED82256424EA04A80040E115 /* WeekHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82256324EA04A80040E115 /* WeekHeaderView.swift */; };
 		ED82256C24EB5FCE0040E115 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82256B24EB5FCE0040E115 /* AppDelegate.swift */; };
-		ED82257024EB5FD50040E115 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED82256F24EB5FD50040E115 /* Assets.xcassets */; };
 		ED82257324EB5FD50040E115 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED82257224EB5FD50040E115 /* Preview Assets.xcassets */; };
 		ED82257624EB5FD50040E115 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED82257424EB5FD50040E115 /* Main.storyboard */; };
 		ED82258024EB60680040E115 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED82257F24EB60680040E115 /* ServiceManagement.framework */; };
-		ED82258224EB60CF0040E115 /* AppDelegate+LauncherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82258124EB60CF0040E115 /* AppDelegate+LauncherHelper.swift */; };
-		ED82258524EB61BC0040E115 /* AppDelegate+LauncherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82258124EB60CF0040E115 /* AppDelegate+LauncherHelper.swift */; };
+		ED82258224EB60CF0040E115 /* LoginItemHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82258124EB60CF0040E115 /* LoginItemHelper.swift */; };
+		ED82258524EB61BC0040E115 /* LoginItemHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED82258124EB60CF0040E115 /* LoginItemHelper.swift */; };
+		EDC28757261B7A4F006A583D /* UpdaterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC28756261B7A4F006A583D /* UpdaterHelper.swift */; };
+		EDC28760261B9356006A583D /* CalMenuLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = ED82256924EB5FCD0040E115 /* CalMenuLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EDC2877F261BC3E7006A583D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED25B16A24E719BC00371D24 /* Assets.xcassets */; };
+		EDC28795261BCDDC006A583D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A43B3261AAA7D00067D18 /* Constants.swift */; };
+		EDC28798261BCE14006A583D /* Constants+CalMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC28791261BCDBF006A583D /* Constants+CalMenu.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EDC28788261BC6A3006A583D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED25B15B24E719B700371D24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED82256824EB5FCD0040E115;
+			remoteInfo = CalMenuLauncher;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		ED82257C24EB601C0040E115 /* CopyFiles */ = {
+		EDC28753261B74C9006A583D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ED3A0B70261BE89400A44DAE /* Sparkle.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDC2875E261B9347006A583D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
+				EDC28760261B9356006A583D /* CalMenuLauncher.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,23 +77,28 @@
 		ED25B17024E719BC00371D24 /* CalMenu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CalMenu.entitlements; sourceTree = "<group>"; };
 		ED25B17824E7213C00371D24 /* CalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalView.swift; sourceTree = "<group>"; };
 		ED31334424F080BA00A49B6D /* TimeInterval+RealInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+RealInterval.swift"; sourceTree = "<group>"; };
+		ED3A0B6D261BE88C00A44DAE /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		ED6A43B3261AAA7D00067D18 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ED813736261BD8F2003E8D77 /* CalMenu.app.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = CalMenu.app.html; sourceTree = "<group>"; };
 		ED82251524E787230040E115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = CalMenu/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ED82251824E787420040E115 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "CalMenu/pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		ED82251C24E78A860040E115 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		ED82255924E7933F0040E115 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
-		ED82255B24E9843A0040E115 /* PrefsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsView.swift; sourceTree = "<group>"; };
+		ED82255B24E9843A0040E115 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		ED82255D24E9B9400040E115 /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		ED82256124E9E4580040E115 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		ED82256324EA04A80040E115 /* WeekHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekHeaderView.swift; sourceTree = "<group>"; };
 		ED82256924EB5FCD0040E115 /* CalMenuLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalMenuLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED82256B24EB5FCE0040E115 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED82256F24EB5FD50040E115 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED82257224EB5FD50040E115 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ED82257524EB5FD50040E115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED82257724EB5FD50040E115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED82257824EB5FD50040E115 /* CalMenuLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CalMenuLauncher.entitlements; sourceTree = "<group>"; };
 		ED82257F24EB60680040E115 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
-		ED82258124EB60CF0040E115 /* AppDelegate+LauncherHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+LauncherHelper.swift"; sourceTree = "<group>"; };
+		ED82258124EB60CF0040E115 /* LoginItemHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginItemHelper.swift; sourceTree = "<group>"; };
+		EDC28756261B7A4F006A583D /* UpdaterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdaterHelper.swift; sourceTree = "<group>"; };
+		EDC2875A261B8044006A583D /* appcast.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = appcast.xml; sourceTree = "<group>"; };
+		EDC28791261BCDBF006A583D /* Constants+CalMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+CalMenu.swift"; sourceTree = "<group>"; };
 		EDC6795D24F6FC0200502145 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,8 +107,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED82251B24E788FB0040E115 /* HotKey in Frameworks */,
 				ED82258024EB60680040E115 /* ServiceManagement.framework in Frameworks */,
+				ED3A0B6F261BE89400A44DAE /* Sparkle.framework in Frameworks */,
+				ED6A43B0261AAA7200067D18 /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,9 +123,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED09DB2E261A2BB600906ECE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				ED6A43B3261AAA7D00067D18 /* Constants.swift */,
+				ED82258124EB60CF0040E115 /* LoginItemHelper.swift */,
+				EDC28756261B7A4F006A583D /* UpdaterHelper.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		ED25B15A24E719B700371D24 = {
 			isa = PBXGroup;
 			children = (
+				EDC28759261B8044006A583D /* releases */,
+				ED09DB2E261A2BB600906ECE /* Common */,
 				EDC6795D24F6FC0200502145 /* README.md */,
 				ED25B16524E719B700371D24 /* CalMenu */,
 				ED82256A24EB5FCE0040E115 /* CalMenuLauncher */,
@@ -111,20 +158,20 @@
 		ED25B16524E719B700371D24 /* CalMenu */ = {
 			isa = PBXGroup;
 			children = (
+				EDC28791261BCDBF006A583D /* Constants+CalMenu.swift */,
 				ED25B16624E719B700371D24 /* AppDelegate.swift */,
-				ED82258124EB60CF0040E115 /* AppDelegate+LauncherHelper.swift */,
-				ED25B17824E7213C00371D24 /* CalView.swift */,
-				ED82256124E9E4580040E115 /* WeekView.swift */,
-				ED82256324EA04A80040E115 /* WeekHeaderView.swift */,
 				ED82255D24E9B9400040E115 /* DayView.swift */,
+				ED82256324EA04A80040E115 /* WeekHeaderView.swift */,
+				ED82256124E9E4580040E115 /* WeekView.swift */,
+				ED25B17824E7213C00371D24 /* CalView.swift */,
+				ED82255B24E9843A0040E115 /* SettingsView.swift */,
+				ED82255924E7933F0040E115 /* CalendarHelper.swift */,
+				ED31334424F080BA00A49B6D /* TimeInterval+RealInterval.swift */,
+				ED82251424E787230040E115 /* Localizable.strings */,
 				ED25B16A24E719BC00371D24 /* Assets.xcassets */,
 				ED82251C24E78A860040E115 /* Main.storyboard */,
 				ED25B16F24E719BC00371D24 /* Info.plist */,
 				ED25B17024E719BC00371D24 /* CalMenu.entitlements */,
-				ED82251424E787230040E115 /* Localizable.strings */,
-				ED82255924E7933F0040E115 /* CalendarHelper.swift */,
-				ED82255B24E9843A0040E115 /* PrefsView.swift */,
-				ED31334424F080BA00A49B6D /* TimeInterval+RealInterval.swift */,
 			);
 			path = CalMenu;
 			sourceTree = "<group>";
@@ -133,7 +180,6 @@
 			isa = PBXGroup;
 			children = (
 				ED82256B24EB5FCE0040E115 /* AppDelegate.swift */,
-				ED82256F24EB5FD50040E115 /* Assets.xcassets */,
 				ED82257424EB5FD50040E115 /* Main.storyboard */,
 				ED82257724EB5FD50040E115 /* Info.plist */,
 				ED82257824EB5FD50040E115 /* CalMenuLauncher.entitlements */,
@@ -153,9 +199,19 @@
 		ED82257E24EB60670040E115 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED3A0B6D261BE88C00A44DAE /* Sparkle.framework */,
 				ED82257F24EB60680040E115 /* ServiceManagement.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EDC28759261B8044006A583D /* releases */ = {
+			isa = PBXGroup;
+			children = (
+				ED813736261BD8F2003E8D77 /* CalMenu.app.html */,
+				EDC2875A261B8044006A583D /* appcast.xml */,
+			);
+			path = releases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,15 +224,17 @@
 				ED25B15F24E719B700371D24 /* Sources */,
 				ED25B16024E719B700371D24 /* Frameworks */,
 				ED25B16124E719B700371D24 /* Resources */,
-				ED82257C24EB601C0040E115 /* CopyFiles */,
+				EDC2875E261B9347006A583D /* CopyFiles */,
+				EDC28753261B74C9006A583D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EDC28789261BC6A3006A583D /* PBXTargetDependency */,
 			);
 			name = CalMenu;
 			packageProductDependencies = (
-				ED82251A24E788FB0040E115 /* HotKey */,
+				ED6A43AF261AAA7200067D18 /* KeyboardShortcuts */,
 			);
 			productName = CalMenu;
 			productReference = ED25B16324E719B700371D24 /* CalMenu.app */;
@@ -228,7 +286,7 @@
 			);
 			mainGroup = ED25B15A24E719B700371D24;
 			packageReferences = (
-				ED82251924E788FB0040E115 /* XCRemoteSwiftPackageReference "HotKey" */,
+				ED6A43AE261AAA7200067D18 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
 			);
 			productRefGroup = ED25B16424E719B700371D24 /* Products */;
 			projectDirPath = "";
@@ -256,8 +314,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED82257624EB5FD50040E115 /* Main.storyboard in Resources */,
+				EDC2877F261BC3E7006A583D /* Assets.xcassets in Resources */,
 				ED82257324EB5FD50040E115 /* Preview Assets.xcassets in Resources */,
-				ED82257024EB5FD50040E115 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,12 +327,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED82256424EA04A80040E115 /* WeekHeaderView.swift in Sources */,
-				ED82258224EB60CF0040E115 /* AppDelegate+LauncherHelper.swift in Sources */,
+				ED82258224EB60CF0040E115 /* LoginItemHelper.swift in Sources */,
 				ED82256224E9E4580040E115 /* WeekView.swift in Sources */,
 				ED31334524F080BA00A49B6D /* TimeInterval+RealInterval.swift in Sources */,
+				EDC28757261B7A4F006A583D /* UpdaterHelper.swift in Sources */,
 				ED25B17924E7213C00371D24 /* CalView.swift in Sources */,
+				ED6A43B9261AAC7200067D18 /* Constants.swift in Sources */,
 				ED82255E24E9B9400040E115 /* DayView.swift in Sources */,
-				ED82255C24E9843A0040E115 /* PrefsView.swift in Sources */,
+				ED82255C24E9843A0040E115 /* SettingsView.swift in Sources */,
+				EDC28798261BCE14006A583D /* Constants+CalMenu.swift in Sources */,
 				ED82255A24E7933F0040E115 /* CalendarHelper.swift in Sources */,
 				ED25B16724E719B700371D24 /* AppDelegate.swift in Sources */,
 			);
@@ -284,12 +345,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED82258524EB61BC0040E115 /* AppDelegate+LauncherHelper.swift in Sources */,
+				ED82258524EB61BC0040E115 /* LoginItemHelper.swift in Sources */,
 				ED82256C24EB5FCE0040E115 /* AppDelegate.swift in Sources */,
+				EDC28795261BCDDC006A583D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDC28789261BC6A3006A583D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED82256824EB5FCD0040E115 /* CalMenuLauncher */;
+			targetProxy = EDC28788261BC6A3006A583D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		ED82251424E787230040E115 /* Localizable.strings */ = {
@@ -437,15 +507,20 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 111;
+				DEVELOPMENT_ASSET_PATHS = "CalMenuLauncher/Preview\\ Content";
 				DEVELOPMENT_TEAM = DWJ2ZWUP8Q;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CalMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.crespo.CalMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -460,15 +535,20 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 111;
+				DEVELOPMENT_ASSET_PATHS = "CalMenuLauncher/Preview\\ Content";
 				DEVELOPMENT_TEAM = DWJ2ZWUP8Q;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CalMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.crespo.CalMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -480,9 +560,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CalMenuLauncher/CalMenuLauncher.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_ASSET_PATHS = "\"CalMenuLauncher/Preview Content\"";
 				DEVELOPMENT_TEAM = DWJ2ZWUP8Q;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -493,8 +574,10 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.crespo.CalMenuLauncher;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.crespo.CalMenu.Launcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -504,9 +587,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CalMenuLauncher/CalMenuLauncher.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_ASSET_PATHS = "\"CalMenuLauncher/Preview Content\"";
 				DEVELOPMENT_TEAM = DWJ2ZWUP8Q;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -517,8 +601,10 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.crespo.CalMenuLauncher;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.crespo.CalMenu.Launcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -556,21 +642,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		ED82251924E788FB0040E115 /* XCRemoteSwiftPackageReference "HotKey" */ = {
+		ED6A43AE261AAA7200067D18 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/soffes/HotKey";
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.3;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		ED82251A24E788FB0040E115 /* HotKey */ = {
+		ED6A43AF261AAA7200067D18 /* KeyboardShortcuts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ED82251924E788FB0040E115 /* XCRemoteSwiftPackageReference "HotKey" */;
-			productName = HotKey;
+			package = ED6A43AE261AAA7200067D18 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
