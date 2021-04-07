@@ -79,6 +79,8 @@
 		ED31334424F080BA00A49B6D /* TimeInterval+RealInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+RealInterval.swift"; sourceTree = "<group>"; };
 		ED3A0B6D261BE88C00A44DAE /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		ED3A0B7E261C0E9100A44DAE /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		ED3A0B85261D4CF900A44DAE /* FUNDING.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = FUNDING.yml; sourceTree = "<group>"; };
+		ED3A0B86261D5C3900A44DAE /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		ED6A43B3261AAA7D00067D18 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ED813736261BD8F2003E8D77 /* CalMenu.app.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = CalMenu.app.html; sourceTree = "<group>"; };
 		ED82251524E787230040E115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = CalMenu/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -137,9 +139,11 @@
 		ED25B15A24E719B700371D24 = {
 			isa = PBXGroup;
 			children = (
+				ED3A0B84261D4CF900A44DAE /* .github */,
 				EDC28759261B8044006A583D /* releases */,
 				ED09DB2E261A2BB600906ECE /* Common */,
 				EDC6795D24F6FC0200502145 /* README.md */,
+				ED3A0B86261D5C3900A44DAE /* CHANGELOG.md */,
 				ED25B16524E719B700371D24 /* CalMenu */,
 				ED82256A24EB5FCE0040E115 /* CalMenuLauncher */,
 				ED25B16424E719B700371D24 /* Products */,
@@ -175,6 +179,14 @@
 				ED25B17024E719BC00371D24 /* CalMenu.entitlements */,
 			);
 			path = CalMenu;
+			sourceTree = "<group>";
+		};
+		ED3A0B84261D4CF900A44DAE /* .github */ = {
+			isa = PBXGroup;
+			children = (
+				ED3A0B85261D4CF900A44DAE /* FUNDING.yml */,
+			);
+			path = .github;
 			sourceTree = "<group>";
 		};
 		ED82256A24EB5FCE0040E115 /* CalMenuLauncher */ = {

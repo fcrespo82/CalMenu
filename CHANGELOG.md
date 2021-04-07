@@ -12,7 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Release notes not showing on update screen
 
 ### Removed
-- Sandbox for being able to use Sparkle.framework 
+- Sandbox to be able to use Sparkle.framework 
 
 ## [1.1.1] - 2021-04-04
 
