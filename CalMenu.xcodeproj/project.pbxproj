@@ -94,7 +94,6 @@
 		ED6537022620B2CB003FD322 /* UpdateTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTab.swift; sourceTree = "<group>"; };
 		ED6537052620D656003FD322 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		ED6A43B3261AAA7D00067D18 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		ED813736261BD8F2003E8D77 /* CalMenu.app.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = CalMenu.app.html; sourceTree = "<group>"; };
 		ED82251524E787230040E115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = CalMenu/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ED82251824E787420040E115 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "CalMenu/pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		ED82251C24E78A860040E115 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -240,7 +239,6 @@
 		EDC28759261B8044006A583D /* releases */ = {
 			isa = PBXGroup;
 			children = (
-				ED813736261BD8F2003E8D77 /* CalMenu.app.html */,
 				EDC2875A261B8044006A583D /* appcast.xml */,
 			);
 			path = releases;
@@ -545,7 +543,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 112;
+				CURRENT_PROJECT_VERSION = 120;
 				DEVELOPMENT_ASSET_PATHS = "CalMenuLauncher/Preview\\ Content";
 				DEVELOPMENT_TEAM = DWJ2ZWUP8Q;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -558,7 +556,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.2;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.crespo.CalMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -573,7 +571,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 112;
+				CURRENT_PROJECT_VERSION = 120;
 				DEVELOPMENT_ASSET_PATHS = "CalMenuLauncher/Preview\\ Content";
 				DEVELOPMENT_TEAM = DWJ2ZWUP8Q;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -586,7 +584,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.2;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.crespo.CalMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
