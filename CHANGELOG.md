@@ -5,11 +5,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+
+## [1.2.0] - 2021-04-09
+
 ### Added 
 - Donation screen
 
 ### Fixed
 - Release notes not showing on update screen
+
+### Changed
+- Better settings screen
 
 ### Removed
 - Sandbox to be able to use Sparkle.framework 
