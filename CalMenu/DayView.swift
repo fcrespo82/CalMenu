@@ -30,14 +30,14 @@ struct DayView: View {
 struct DayView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            VStack {
+            HStack {
                 DayView(day: .constant(1), dimmed: .constant(false), selected: .constant(false))
                 DayView(day: .constant(2), dimmed: .constant(false), selected: .constant(true))
                 DayView(day: .constant(3), dimmed: .constant(true), selected: .constant(false))
             }
             .background(Color(NSColor.windowBackgroundColor))
             .colorScheme(.light)
-			VStack {
+			HStack {
 				DayView(day: .constant(1), dimmed: .constant(false), selected: .constant(false))
 				DayView(day: .constant(2), dimmed: .constant(false), selected: .constant(true))
 				DayView(day: .constant(3), dimmed: .constant(true), selected: .constant(false))

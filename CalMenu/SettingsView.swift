@@ -6,93 +6,66 @@
 //  Copyright © 2020 Fernando Crespo. All rights reserved.
 //
 
-import SwiftUI
 import Foundation
-import KeyboardShortcuts
+import SwiftUI
 
 struct SettingsView: View {
-    @State var text: String!
-    
-    @State var isRegistered = UserDefaults.standard.bool(forKey: DEFAULTS_LAUNCH_ON_BOOT_KEY)
-    
-    @State var automaticallyCheckForUpdates = UserDefaults.standard.bool(forKey: DEFAULTS_CHECK_FOR_UPDATE_KEY)
-    
-    @State var dismiss: (() -> Void)!
-    
-    // Not sure this is the best way of doing it
-    var presentingWindow: NSWindow!
-    
-    var body: some View {
-        let launchOnBootBinding = Binding(
-            get: {
-                return self.isRegistered
-            },
-            set: {
-                UserDefaults.standard.set($0, forKey: DEFAULTS_LAUNCH_ON_BOOT_KEY)
-                self.isRegistered = $0
-                if self.isRegistered {
-                    registerLoginItem()
-                } else {
-                    registerLoginItem(false)
-                }
-            }
-        )
         
-        let checkForUpdateBinding = Binding(
-            get: {
-                return self.automaticallyCheckForUpdates
-            },
-            set: {
-                UserDefaults.standard.set($0, forKey: DEFAULTS_CHECK_FOR_UPDATE_KEY)
-                self.automaticallyCheckForUpdates = $0
+    @State var text: String!
+
+    @State var dismiss: (() -> Void)!
+
+    @State var tabSelected: Toolbar.Tab.Id = .general
+
+    @State var buttons = [
+        Toolbar.Button(id: .general, title: "General", imageSystemName: "gearshape.fill"),
+        Toolbar.Button(id: .update, title: "Updates", imageSystemName: "arrow.down.circle.fill"),
+        Toolbar.Button(id: .donate, title: "Donate", imageSystemName: "dollarsign.square.fill"),
+    ]
+    @State var s: Int = 0
+    var body: some View {
+        VStack(spacing: 5) {
+            ToolbarView(selectedTab: $tabSelected, buttons: $buttons)
+            
+            switch tabSelected {
+            case .general:
+                GeneralTab()
+            case .update:
+                UpdateTab()
+            case .donate:
+                DonateTab()
             }
-        )
-        VStack {
-            TabView {
-                VStack {
-                    HStack {
-                        Text("Toggle Calendar View:")
-                        KeyboardShortcuts.Recorder(for: .toggleCalendarView)
-                    }
-                    Toggle(isOn: launchOnBootBinding) {
-                        Text("Launch on startup")
-                    }
-                }
-                .padding()
-                .tabItem {
-                    Text("General")
-                }
-                VStack {
-                    Button(action: {
-                        checkForUpdates()
-                    }, label: {
-                        Text("Check for updates")
-                    })
-                    Toggle(isOn: checkForUpdateBinding) {
-                        Text("Check for updates automatically")
-                    }
-                }
-                .padding()
-                .tabItem {
-                    Text("Updates")
-                }
-            }
+
             HStack {
                 Spacer()
                 Button(action: {
-                    self.presentingWindow.close()
+                    if let delegate = NSApp.delegate as? AppDelegate {
+                        delegate.closeSettingsWindow(self)
+                    }
                 }, label: {
                     Text("Close")
                 })
             }
+            .padding(5)
         }
-        .frame(width: 400, height: 150, alignment: .center)
-        .padding()
+        .fixedSize()
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        PreviewWrapper()
+    }
+
+    struct PreviewWrapper: View {
+        @State(initialValue: .general) var selected: Toolbar.Tab.Id
+
+        var body: some View {
+            SettingsView(tabSelected: selected)
+                .background(Color(NSColor.windowBackgroundColor))
+            SettingsView(tabSelected: selected)
+                .background(Color(NSColor.windowBackgroundColor))
+                .colorScheme(.dark)
+        }
     }
 }

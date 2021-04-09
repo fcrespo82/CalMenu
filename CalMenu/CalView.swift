@@ -15,11 +15,11 @@ struct CalView: View {
     @State private var date: Date! = Date()
     @Environment(\.calendar) var calendar
     @Environment(\.locale) var locale
-    
+
     init() {
         date = Date()
     }
-    
+
     var body: some View {
         let daysOfMonthByWeek = CalendarHelper.getDaysPadded(for: date)
         return
@@ -28,7 +28,11 @@ struct CalView: View {
                     Button(action: {
                         self.date = self.date.advanced(by: -.oneMonth)
                     }) {
-                        Text("←")
+                        if #available(OSX 11.0, *) {
+                            Image(systemName: "arrow.left")
+                        } else {
+                            Text("←")
+                        }
                     }
                     VStack(alignment: .center, spacing: 5) {
                         Text(CalendarHelper.monthName(for: date, locale: locale))
@@ -45,7 +49,11 @@ struct CalView: View {
                     Button(action: {
                         self.date = self.date.advanced(by: .oneMonth)
                     }) {
-                        Text("→")
+                        if #available(OSX 11.0, *) {
+                            Image(systemName: "arrow.right")
+                        } else {
+                            Text("→")
+                        }
                     }
                 }
                 WeekHeaderView()
@@ -54,7 +62,9 @@ struct CalView: View {
                 }
                 HStack {
                     Button(action: {
-                        showSettings()
+                        if let delegate = NSApp.delegate as? AppDelegate {
+                            delegate.showSettingsWindow(self)
+                        }
                     }) {
                         Text("Settings").padding(.horizontal, 5)
                             .fixedSize()
@@ -72,31 +82,16 @@ struct CalView: View {
             .fixedSize()
             .padding(5)
     }
-    
-    func showSettings() {
-        // The application does not appear in the Dock and does not have a menu bar, but it may be activated programmatically or by clicking on one of its windows.
-        NSApplication.shared.setActivationPolicy(.accessory)
-        // If line bellow is not set the app cannot bring the window to the front of all apps.
-        NSApplication.shared.activate(ignoringOtherApps: true)
-        
-        let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 400, height: 200), styleMask: [.closable, .miniaturizable, .resizable, .titled], backing: .buffered, defer: true)
-        
-        let hostingController = NSHostingController(rootView: SettingsView(presentingWindow: window))
-        
-        window.contentViewController = hostingController
-        window.title = NSLocalizedString("Settings", comment: "Settings String")
-        window.center()
-        window.setFrameAutosaveName("Settings Window")
-        window.makeKeyAndOrderFront(nil)
-    }
 }
 
 struct CalView_Previews: PreviewProvider {
     static var calendar = Calendar.autoupdatingCurrent
-    
+
     static var previews: some View {
         Group {
-            CalView().colorScheme(.light)
+            CalView()
+                .background(Color(NSColor.windowBackgroundColor))
+                .colorScheme(.light)
             CalView()
                 .background(Color(NSColor.windowBackgroundColor))
                 .colorScheme(.dark)

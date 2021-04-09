@@ -13,6 +13,12 @@
 		ED31334524F080BA00A49B6D /* TimeInterval+RealInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31334424F080BA00A49B6D /* TimeInterval+RealInterval.swift */; };
 		ED3A0B6F261BE89400A44DAE /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3A0B6D261BE88C00A44DAE /* Sparkle.framework */; };
 		ED3A0B70261BE89400A44DAE /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED3A0B6D261BE88C00A44DAE /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED3A0B89261E1A8100A44DAE /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3A0B88261E1A8100A44DAE /* ToolbarView.swift */; };
+		ED6536C9261FE475003FD322 /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6536C8261FE475003FD322 /* Toolbar.swift */; };
+		ED6536FD2620B1F7003FD322 /* GeneralTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6536FC2620B1F7003FD322 /* GeneralTab.swift */; };
+		ED6537002620B298003FD322 /* DonateTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6536FF2620B298003FD322 /* DonateTab.swift */; };
+		ED6537032620B2CB003FD322 /* UpdateTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6537022620B2CB003FD322 /* UpdateTab.swift */; };
+		ED6537062620D656003FD322 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6537052620D656003FD322 /* Test.swift */; };
 		ED6A43B0261AAA7200067D18 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = ED6A43AF261AAA7200067D18 /* KeyboardShortcuts */; };
 		ED6A43B9261AAC7200067D18 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6A43B3261AAA7D00067D18 /* Constants.swift */; };
 		ED82251624E787230040E115 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED82251424E787230040E115 /* Localizable.strings */; };
@@ -81,6 +87,12 @@
 		ED3A0B7E261C0E9100A44DAE /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		ED3A0B85261D4CF900A44DAE /* FUNDING.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = FUNDING.yml; sourceTree = "<group>"; };
 		ED3A0B86261D5C3900A44DAE /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		ED3A0B88261E1A8100A44DAE /* ToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarView.swift; sourceTree = "<group>"; };
+		ED6536C8261FE475003FD322 /* Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
+		ED6536FC2620B1F7003FD322 /* GeneralTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTab.swift; sourceTree = "<group>"; };
+		ED6536FF2620B298003FD322 /* DonateTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateTab.swift; sourceTree = "<group>"; };
+		ED6537022620B2CB003FD322 /* UpdateTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTab.swift; sourceTree = "<group>"; };
+		ED6537052620D656003FD322 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		ED6A43B3261AAA7D00067D18 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ED813736261BD8F2003E8D77 /* CalMenu.app.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = CalMenu.app.html; sourceTree = "<group>"; };
 		ED82251524E787230040E115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = CalMenu/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -169,14 +181,20 @@
 				ED82256324EA04A80040E115 /* WeekHeaderView.swift */,
 				ED82256124E9E4580040E115 /* WeekView.swift */,
 				ED25B17824E7213C00371D24 /* CalView.swift */,
-				ED82255B24E9843A0040E115 /* SettingsView.swift */,
 				ED82255924E7933F0040E115 /* CalendarHelper.swift */,
 				ED31334424F080BA00A49B6D /* TimeInterval+RealInterval.swift */,
+				ED6536C8261FE475003FD322 /* Toolbar.swift */,
+				ED3A0B88261E1A8100A44DAE /* ToolbarView.swift */,
+				ED82255B24E9843A0040E115 /* SettingsView.swift */,
+				ED6536FF2620B298003FD322 /* DonateTab.swift */,
+				ED6537022620B2CB003FD322 /* UpdateTab.swift */,
+				ED6536FC2620B1F7003FD322 /* GeneralTab.swift */,
 				ED82251424E787230040E115 /* Localizable.strings */,
 				ED25B16A24E719BC00371D24 /* Assets.xcassets */,
 				ED82251C24E78A860040E115 /* Main.storyboard */,
 				ED25B16F24E719BC00371D24 /* Info.plist */,
 				ED25B17024E719BC00371D24 /* CalMenu.entitlements */,
+				ED6537052620D656003FD322 /* Test.swift */,
 			);
 			path = CalMenu;
 			sourceTree = "<group>";
@@ -346,12 +364,18 @@
 				ED31334524F080BA00A49B6D /* TimeInterval+RealInterval.swift in Sources */,
 				EDC28757261B7A4F006A583D /* UpdaterHelper.swift in Sources */,
 				ED25B17924E7213C00371D24 /* CalView.swift in Sources */,
+				ED3A0B89261E1A8100A44DAE /* ToolbarView.swift in Sources */,
+				ED6536C9261FE475003FD322 /* Toolbar.swift in Sources */,
 				ED6A43B9261AAC7200067D18 /* Constants.swift in Sources */,
 				ED82255E24E9B9400040E115 /* DayView.swift in Sources */,
+				ED6536FD2620B1F7003FD322 /* GeneralTab.swift in Sources */,
+				ED6537062620D656003FD322 /* Test.swift in Sources */,
 				ED82255C24E9843A0040E115 /* SettingsView.swift in Sources */,
+				ED6537002620B298003FD322 /* DonateTab.swift in Sources */,
 				EDC28798261BCE14006A583D /* Constants+CalMenu.swift in Sources */,
 				ED82255A24E7933F0040E115 /* CalendarHelper.swift in Sources */,
 				ED25B16724E719B700371D24 /* AppDelegate.swift in Sources */,
+				ED6537032620B2CB003FD322 /* UpdateTab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

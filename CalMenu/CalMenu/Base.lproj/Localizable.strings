@@ -8,10 +8,13 @@
 
 "Quit" = "Quit";
 "Settings" = "Settings";
-"Toggle Calendar View:" = "Toggle Calendar View:";
+"Toggle calendar view:" = "Toggle calendar view:";
 "Close" = "Close";
 "Launch on startup" = "Launch on startup";
 "General" = "General";
 "Check for updates" = "Check for updates";
 "Check for updates automatically" = "Check for updates automatically";
 "Updates" = "Updates";
+"Version:" = "Version:";
+"Donate" = "Donate";
+"Donate to my open source projects" = "Donate to my open source projects";
