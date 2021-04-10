@@ -38,7 +38,7 @@ struct ToolbarView_Previews: PreviewProvider {
         @State(initialValue: .general) var selected: Toolbar.Tab.Id
         @State var buttons: [Toolbar.Button] = [
                 Toolbar.Button(id: .general, title: "General", imageSystemName: "gearshape.fill"),
-                Toolbar.Button(id: .update, title: "Updates", imageSystemName: "arrow.down.circle.fill"),
+                Toolbar.Button(id: .update, title: "Updates", imageSystemName: "arrow.triangle.2.circlepath.circle.fill"),
                 Toolbar.Button(id: .donate, title: "Donate", imageSystemName: "dollarsign.square.fill")
             ]
         var body: some View {
