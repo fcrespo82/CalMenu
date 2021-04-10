@@ -7,10 +7,18 @@
 //
 
 import Foundation
+
+struct DayInfo: Identifiable {
+    var id: Int { return day }
+    var day: Int
+    var dimmed: Bool = false
+    var selected: Bool = false
+}
+
 class CalendarHelper {
     static let calendar = Calendar.autoupdatingCurrent
 
-    static func getDaysPadded(for date: Date = Date()) -> [[(Int, Bool, Bool)]] {
+    static func getDaysPadded(for date: Date = Date()) -> [[DayInfo]] {
         let components = calendar.dateComponents([.year, .month], from: date)
 
         let firstDayOfThisMonth = calendar.date(from: components)!
@@ -22,21 +30,27 @@ class CalendarHelper {
         let daysInLastMonth = calendar.range(of: .day, in: .weekOfMonth, for: lastDayOfLastMonth)!
         let daysInNextMonth = calendar.range(of: .day, in: .weekOfMonth, for: firstDayOfNextMonth)!
 
-        let tupleDaysInLastMonth = daysInLastMonth.map { (day) -> (day: Int, dimmed: Bool, selected: Bool) in
-            (day: day, dimmed: true, selected: false)
+        var tupleDaysInLastMonth: [DayInfo] = []
+        if daysInLastMonth.count < 7 {
+            tupleDaysInLastMonth = daysInLastMonth.map { (day) -> DayInfo in
+                DayInfo(day: day, dimmed: true, selected: false)
+            }
         }
-        let tupleDaysInThisMonth = daysInThisMonth.map { (day) -> (day: Int, dimmed: Bool, selected: Bool) in
+        let tupleDaysInThisMonth = daysInThisMonth.map { (day) -> DayInfo in
 
             let thisDate = calendar.date(byAdding: DateComponents(day: day - 1), to: firstDayOfThisMonth)!
             let select = calendar.compare(thisDate, to: Date(), toGranularity: .day) == .orderedSame
 
-            return (day: day, dimmed: false, selected: select)
+            return DayInfo(day: day, dimmed: false, selected: select)
         }
-        let tupleDaysInNextMonth = daysInNextMonth.map { (day) -> (day: Int, dimmed: Bool, selected: Bool) in
-            (day: day, dimmed: true, selected: false)
+        var tupleDaysInNextMonth: [DayInfo] = []
+        if daysInNextMonth.count < 7 {
+            tupleDaysInNextMonth = daysInNextMonth.map { (day) -> DayInfo in
+                DayInfo(day: day, dimmed: true, selected: false)
+            }
         }
 
-        var daysOfMonthByWeek: [[(Int, Bool, Bool)]] = []
+        var daysOfMonthByWeek: [[DayInfo]] = []
 
         // Divide days into weeks easiyly
         _ = (Array(tupleDaysInLastMonth) + Array(tupleDaysInThisMonth) + Array(tupleDaysInNextMonth)).publisher

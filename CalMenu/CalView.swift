@@ -12,18 +12,30 @@ import SwiftUI
 
 struct CalView: View {
     var cellSize: CGFloat = 20
-    @State private var date: Date! = Date()
+    @State var date: Date! = Date()
     @Environment(\.calendar) var calendar
     @Environment(\.locale) var locale
 
-    init() {
-        date = Date()
-    }
+//    init() {
+//        date = Date()
+//    }
 
     var body: some View {
         let daysOfMonthByWeek = CalendarHelper.getDaysPadded(for: date)
         return
-            VStack(alignment: .trailing) {
+            VStack {
+                if (ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1") || (ProcessInfo.processInfo.environment["DEBUG"] == "1") {
+                    HStack {
+                        if ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1" {
+                            Text("Preview")
+                            Spacer()
+                        }
+                        if ProcessInfo.processInfo.environment["DEBUG"] == "1" {
+                            Text("Debug")
+                        }
+                    }.background(Color.yellow)
+                }
+
                 HStack {
                     Button(action: {
                         self.date = self.date.advanced(by: -.oneMonth)
@@ -58,7 +70,7 @@ struct CalView: View {
                 }
                 WeekHeaderView()
                 ForEach(daysOfMonthByWeek.indices, id: \.self) { week in
-                    WeekView(week: .constant(daysOfMonthByWeek[week]))
+                    WeekView(week: daysOfMonthByWeek[week])
                 }
                 HStack {
                     Button(action: {
@@ -85,11 +97,12 @@ struct CalView: View {
 }
 
 struct CalView_Previews: PreviewProvider {
-    static var calendar = Calendar.autoupdatingCurrent
-
+    static let calendar = Calendar.autoupdatingCurrent
+    static let date = calendar.date(from: DateComponents(year:2022, month:12))
+    
     static var previews: some View {
         Group {
-            CalView()
+            CalView(date: date)
                 .background(Color(NSColor.windowBackgroundColor))
                 .colorScheme(.light)
             CalView()

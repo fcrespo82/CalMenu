@@ -10,7 +10,6 @@
 		ED25B16724E719B700371D24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED25B16624E719B700371D24 /* AppDelegate.swift */; };
 		ED25B16B24E719BC00371D24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED25B16A24E719BC00371D24 /* Assets.xcassets */; };
 		ED25B17924E7213C00371D24 /* CalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED25B17824E7213C00371D24 /* CalView.swift */; };
-		ED31334524F080BA00A49B6D /* TimeInterval+RealInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED31334424F080BA00A49B6D /* TimeInterval+RealInterval.swift */; };
 		ED3A0B6F261BE89400A44DAE /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED3A0B6D261BE88C00A44DAE /* Sparkle.framework */; };
 		ED3A0B70261BE89400A44DAE /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED3A0B6D261BE88C00A44DAE /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED3A0B89261E1A8100A44DAE /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3A0B88261E1A8100A44DAE /* ToolbarView.swift */; };
@@ -82,7 +81,6 @@
 		ED25B16F24E719BC00371D24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED25B17024E719BC00371D24 /* CalMenu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CalMenu.entitlements; sourceTree = "<group>"; };
 		ED25B17824E7213C00371D24 /* CalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalView.swift; sourceTree = "<group>"; };
-		ED31334424F080BA00A49B6D /* TimeInterval+RealInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+RealInterval.swift"; sourceTree = "<group>"; };
 		ED3A0B6D261BE88C00A44DAE /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		ED3A0B7E261C0E9100A44DAE /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		ED3A0B85261D4CF900A44DAE /* FUNDING.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = FUNDING.yml; sourceTree = "<group>"; };
@@ -93,6 +91,7 @@
 		ED6536FF2620B298003FD322 /* DonateTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateTab.swift; sourceTree = "<group>"; };
 		ED6537022620B2CB003FD322 /* UpdateTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTab.swift; sourceTree = "<group>"; };
 		ED6537052620D656003FD322 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		ED65371026214ECE003FD322 /* Icon.vectornator */ = {isa = PBXFileReference; lastKnownFileType = text; path = Icon.vectornator; sourceTree = "<group>"; };
 		ED6A43B3261AAA7D00067D18 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ED82251524E787230040E115 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = CalMenu/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ED82251824E787420040E115 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "CalMenu/pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -150,6 +149,7 @@
 		ED25B15A24E719B700371D24 = {
 			isa = PBXGroup;
 			children = (
+				ED65370F26214ECE003FD322 /* assets */,
 				ED3A0B84261D4CF900A44DAE /* .github */,
 				EDC28759261B8044006A583D /* releases */,
 				ED09DB2E261A2BB600906ECE /* Common */,
@@ -181,7 +181,6 @@
 				ED82256124E9E4580040E115 /* WeekView.swift */,
 				ED25B17824E7213C00371D24 /* CalView.swift */,
 				ED82255924E7933F0040E115 /* CalendarHelper.swift */,
-				ED31334424F080BA00A49B6D /* TimeInterval+RealInterval.swift */,
 				ED6536C8261FE475003FD322 /* Toolbar.swift */,
 				ED3A0B88261E1A8100A44DAE /* ToolbarView.swift */,
 				ED82255B24E9843A0040E115 /* SettingsView.swift */,
@@ -204,6 +203,14 @@
 				ED3A0B85261D4CF900A44DAE /* FUNDING.yml */,
 			);
 			path = .github;
+			sourceTree = "<group>";
+		};
+		ED65370F26214ECE003FD322 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				ED65371026214ECE003FD322 /* Icon.vectornator */,
+			);
+			path = assets;
 			sourceTree = "<group>";
 		};
 		ED82256A24EB5FCE0040E115 /* CalMenuLauncher */ = {
@@ -359,7 +366,6 @@
 				ED82256424EA04A80040E115 /* WeekHeaderView.swift in Sources */,
 				ED82258224EB60CF0040E115 /* LoginItemHelper.swift in Sources */,
 				ED82256224E9E4580040E115 /* WeekView.swift in Sources */,
-				ED31334524F080BA00A49B6D /* TimeInterval+RealInterval.swift in Sources */,
 				EDC28757261B7A4F006A583D /* UpdaterHelper.swift in Sources */,
 				ED25B17924E7213C00371D24 /* CalView.swift in Sources */,
 				ED3A0B89261E1A8100A44DAE /* ToolbarView.swift in Sources */,
