@@ -16,10 +16,6 @@ struct CalView: View {
     @Environment(\.calendar) var calendar
     @Environment(\.locale) var locale
 
-//    init() {
-//        date = Date()
-//    }
-
     var body: some View {
         let daysOfMonthByWeek = CalendarHelper.getDaysPadded(for: date)
         return
@@ -38,7 +34,7 @@ struct CalView: View {
 
                 HStack {
                     Button(action: {
-                        self.date = self.date.advanced(by: -.oneMonth)
+                        self.date = self.calendar.date(byAdding: DateComponents(month: -1), to: self.date)
                     }) {
                         if #available(OSX 11.0, *) {
                             Image(systemName: "arrow.left")
@@ -59,7 +55,7 @@ struct CalView: View {
                         self.date = Date()
                     })
                     Button(action: {
-                        self.date = self.date.advanced(by: .oneMonth)
+                        self.date = self.calendar.date(byAdding: DateComponents(month: 1), to: self.date)
                     }) {
                         if #available(OSX 11.0, *) {
                             Image(systemName: "arrow.right")
